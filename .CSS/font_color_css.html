@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font_styling</title>
+    <style>
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-color: #1547df;
+            /* text-decoration:wavy; */
+
+        }
+
+        h2 {
+            text-decoration: underline;
+            text-decoration-color: aqua;
+            text-transform: capitalize;
+            text-decoration-style: wavy;
+
+        }
+
+        pre {
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            /* the first one will decide the font only others are the fallback fonts */
+            font-weight: 900;
+            /* the font-weight decides the boldness of the font */
+            text-decoration: underline;
+            line-height: 70px;
+            letter-spacing: 6px;
+            /* text-decoration-thickness: 4px; */
+
+        }
+
+        p {
+            line-height: 40px;
+            text-indent: 2%;
+        }
+
+        .lorem {
+            border: 2px solid rebeccapurple;
+            width: 150px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        #colorcss {
+            font: 600;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            /* background:green; */
+            /* color: rgb(177, 114, 32); */
+            /* color: rgb(8, 172, 117); */
+            /* color: red; */
+            /* color:rgba(red, green, blue, 0.45); */
+            background: #1547df;
+            color: hsl(10, 38%, 79%);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>font</h1>
+    <h2>This is all about me.</h2>
+    <pre>Hello there i am biswajit learning css and javascript</pre>
+    <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis adipisci, quaerat officiis
+        magnam ipsam,
+        delectus provident aliquam quidem blanditiis atque sunt, ipsa at obcaecati asperiores ea consequatur numquam
+
+        eius debitis corrupti doloremque quo nesciunt!
+    </p>
+    <pre>Lets learn about colors in CSS
+        Color can be represent by.....
+    </pre>
+    <ol>
+        <li>keyword colors</li>
+        <li>hexadecimal color code</li>
+        <li>RGB</li>
+        <li>RGBA</li>
+        <li>HCL</li>
+    </ol>
+    <p id="colorcss">lets take an example Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque,
+        corrupti. Magni dolorem placeat voluptatum ipsum nisi, natus omnis animi dignissimos blanditiis eum eligendi
+        deserunt ipsa, quia illum consequatur autem saepe!</p>
+
+</body>
+
+</html>
+

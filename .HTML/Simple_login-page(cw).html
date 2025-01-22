@@ -1,0 +1,60 @@
+<!-- this is  a pure HTML no CSS added to  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login-page</title>
+</head>
+<body>
+    <form>
+        <label for="firstname">Enter the firstname: </label>
+        <input required type="text" placeholder="enter the firstname " id="firstname">
+        <br><br>
+        <label for="lastname">Enter the lastname: </label>
+        <input type="text" placeholder="Enter the lastname" id="lastname">
+        <br><br>
+        <label for="data">Enter DOJ:</label>
+        <input type="date" name="date">
+        <br><br>
+        <label for="age">Enter Age</label>
+        <input type="number" placeholder="enter age" id="age"><br><br>
+
+        <label for="email">Enter your email id</label>
+        <input type="email" placeholder="Enter email here" id="email"><br><br>
+
+        <label for="password">PASSWORD:</label>
+        <input type="password" placeholder="password" id="password">
+        <br><br>
+        <input type="checkbox" id="terms">
+        <label for="terms" form="terms">I agree on all the terms and conditions.</label>
+        <br><br>
+        <label for="gender">select gender:</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">male</label> 
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">female</label>
+        <br>
+        <label for="country">Select Country:</label>
+        <select name="country" id="country">
+            <option value="India">India</option>
+            <option value="UK">UK</option>
+            <option value="Canada">Canada</option>
+            <option value="Israel">Israel</option>
+        </select>
+        <br><br>
+        <textarea placeholder="Write a suggestion or feedback towards this form" rows="10" cols="50"></textarea>
+        <br>
+        <br>
+        <label for="file">Upload file here:</label>
+        <input type="file" value="file" id="file">
+        <br><input type="submit" name="submit">
+        <br>
+        <br><input type="reset" name="reset">
+        <br>
+        <textarea name="textarea" id="text" placeholder="Write something about yourself"> </textarea>
+    </form>
+    <label for="link">Send me the link of Your college:-</label><br>
+<input type="url" id="link">
+</body>
+</html>

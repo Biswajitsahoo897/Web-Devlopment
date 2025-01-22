@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_display_property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid greenyellow;
+            /* width: 90vh; */
+            display: inline-block;
+            /* this inline defines that the margin and padding won't start from the top but after changing display property to display : inline-block ; we can solve this type of issue*/
+            margin: 24px;
+            padding: 20px;
+        }
+
+        .box1 {
+            display: none;
+            /* visibility: hidden; */
+            display:flex;
+        }
+
+        span {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"> i am a box inside the div .</div>
+    <div class="box box1">i am another box in another div.</div>
+    <span>this is span.</span>
+    <span>this is another span ....ansubisdlu is a good boy</span>
+</body>
+
+</html>

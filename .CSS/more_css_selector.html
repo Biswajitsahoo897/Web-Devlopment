@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>more_on_css-selectors</title>
+    <style>
+        /* this is the first child of the .box */
+        .box:first-child {
+            background-color: lightseagreen;
+        }
+
+        .box::first-line {
+            color: rgb(255, 230, 0);
+        }
+
+        .boxes * {
+            color: black;
+            border: 2px solid rgb(128, 0, 128);
+        }
+
+        /* this selector applies to all the elements or tags inside this class  */
+        [data-color="primary"] {
+            margin-top: 23px;
+            padding: 20px;
+        }
+
+        /* the upper one is the attribute selector */
+        p,
+        div,
+        .box {
+            text-shadow: 23px 89px 12px blue;
+        }
+
+        /* this is the group selector applies to all the group */
+        .box:nth-child(even) {
+            background: magenta;
+        }
+
+        .box:nth-last-child(2) {
+            background: #000;
+        }
+
+        .boxes::before {
+            content: "He is a good boy.";
+            /* content: "hello"; */
+            color: blue;
+
+        }
+
+        .boxes::after {
+            content: "this is the last part of the web page.";
+        }
+
+        .boxes::first-letter {
+            color: peru;
+            font-size: 45px;
+
+        }
+
+        input::placeholder {
+            color: mediumseagreen;
+            font-size: x-small;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        #sbutton {
+            color: rgb(67, 67, 67);
+            /* background:lightblue; */
+            border-radius: 20px;
+            cursor: pointer;
+
+
+        }
+
+        #sbutton:hover {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes" data-color="primary">
+        <div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quisquam labore excepturi!
+            Accusamus eius expedita animi veritatis adipisci in nostrum, recusandae officia vero tempore quibusdam
+            veniam? Harum quidem cupiditate aut enim ex, modi, non dolor itaque commodi minus eaque vitae eligendi a? Id
+            repellat facere dolores obcaecati aut libero voluptatem dolorem, ea doloribus quis ad vel rem illo voluptate
+            unde! Esse dolore quas neque saepe! Veniam inventore facilis voluptatibus dolores labore deserunt animi
+            delectus nisi magni, ipsa praesentium accusantium, commodi accusamus non? Magnam nesciunt veniam blanditiis
+            libero officiis, animi nisi sed ratione maxime nulla exercitationem rem ipsam debitis aperiam reprehenderit.
+        </div>
+        <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam dolorem expedita, explicabo omnis,
+            iure
+            ad modi laborum excepturi culpa soluta corrupti quidem itaque, nostrum nesciunt quasi saepe corporis.
+            Molestias doloremque est corporis! Quam perferendis voluptatem molestias, neque ratione dignissimos magni
+            facere, voluptas quaerat animi tenetur vel tempora explicabo culpa rem quos. Non quaerat nesciunt qui!
+            Inventore minima obcaecati sint temporibus quod quae laborum ex, autem officiis architecto quidem,
+            provident, voluptate ipsam quo sed dolor dicta quis quibusdam fugiat quam molestiae! Eos perferendis
+            voluptas animi eaque odio fugit, nisi in magni, dolorum officiis odit itaque at ea beatae repellendus
+            tenetur corrupti.</div>
+        <div class="box">hey i am a second box.</div>
+        <div class="box">hey i am a third box.</div>
+    </div>
+    <p style="font-style: italic;">This is the outer part inside the body tag.</p>
+    <section>
+        <label for="name">Name:</label>
+        <input id="name" type="text" placeholder="Enter your fullname here!"><br>
+        <input type="submit" id="sbutton">
+    </section>
+</body>
+
+</html>

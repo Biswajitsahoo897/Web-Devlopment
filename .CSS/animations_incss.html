@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations</title>
+    <style>
+        .bigbox{
+           height: 90vh;
+           width: 70vw;
+           /* border:2px black; */
+           background: pink; 
+           padding: 10px;
+
+        }
+        .smallbox{
+            height: 10vh;
+            width: 15vw;
+            padding: 5px;
+            /* background: magenta; */
+            box-sizing: border-box;
+            animation-name: firstanimations;
+            animation-duration: 3s;
+            animation-iteration-count: 3;
+            /* animation-iteration-count: infinite; */
+            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+            animation-delay: 1s;
+            animation-fill-mode: forwards;
+            animation-direction: alternate-reverse;
+
+            
+            animation: biswa_1 3s ease-in 4s 5 reverse forwards;
+            /* animation-play-state: paused; */
+            /* Using This u can reverse the animation mainly it is requried in the bouncing or in the simple harmonic motion */
+        }
+        @keyframes firstanimations{
+            from{
+                background-color: blue;
+                transform: rotateY('20deg');
+                transform: scale(1.5);
+            }
+            to{
+                transform: translateX(190px);
+                /* transform: rotate(180deg); */
+                background-color: red;
+            }
+        }
+
+        @keyframes biswa_1 {
+            0%{
+                transform: rotate(100deg);
+            }
+            20%{
+                transform: rotate(200deg);
+            }
+            50%{
+                transform: rotate(220deg);
+            }
+            80%{
+                transform: rotate(300deg);
+            }
+            100%{
+                transform: rotate(310deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bigbox">
+        <div class="smallbox">box</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+1. JavaScript Roadmap 🟨
+Spend 1-2 months mastering the fundamentals. Focus on understanding core concepts before diving into React.
+
+A. JavaScript Fundamentals (Basics)
+Variables and Data Types
+
+var, let, const
+Primitive types: Number, String, Boolean, Null, Undefined
+Reference types: Arrays, Objects, Functions
+Operators
+
+Arithmetic, Assignment, Comparison, Logical operators
+Ternary operators
+Control Flow
+
+Conditional Statements: if, else, switch
+Loops: for, while, do...while, for...in, for...of
+Functions
+
+Function declarations and expressions
+Arrow functions (=>)
+Parameters, return values, and default arguments
+Callbacks
+Arrays and Objects
+
+Array methods: push, pop, map, filter, reduce, forEach
+Object manipulation: Keys, values, and nested objects
+DOM Manipulation
+
+Selecting elements: getElementById, querySelector
+Modifying content and styles (innerHTML, textContent)
+Adding/Removing elements dynamically
+Event handling: addEventListener, mouse and keyboard events
+ES6+ Features (Modern JavaScript)
+
+let and const (block scope)
+Template literals (`Hello ${name}`)
+Destructuring arrays and objects
+Spread and Rest operators (...)
+Map, Set, and new data structures
+Asynchronous JavaScript
+
+setTimeout, setInterval
+Promises: then, catch, and finally
+Async/Await
+Fetch API and JSON
+
+Making HTTP requests with fetch()
+Working with JSON data from APIs
+Error Handling
+
+try...catch and debugging with console methods like console.log().
+B. Projects to Practice JavaScript
+To-Do List App: Add, edit, and delete tasks.
+Calculator: Simple arithmetic operations.
+Digital Clock: Display real-time updates.
+Weather App: Fetch and display weather using an API.
+Quiz App: Multiple-choice questions with score tracking.

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid-2</title>
+    <style>
+        .container {
+            /* color: rebeccapurple; */
+            background: rgb(203, 113, 44);
+            border: 3px solid black;
+            height: 44vh;
+            width: 90vw;
+            display: grid;
+            /* grid-template-areas: "nav nav nav "
+                "side article article"
+                "footer footer footer"; */
+
+                /* grid-template-columns: 1fr 3fr 2fr; */
+            
+            /* fr means fraction  */
+            /* grid-template-columns: repeat(4,1fr); */
+            
+            grid-template-columns: repeat(4 , minmax(100px 1fr));
+            row-gap: 10px;
+            column-gap: 30px;
+            justify-items:flex-start;
+            /* justify to the center of the each cell */
+            /* align-items: center; */
+            /* vertically center */
+
+
+            /* justify-item,align-item within the cell */
+            /* justify-content,justifiy-items within the container 
+            or when the container size is bigger than the grid then only we will apply this*/
+
+        }
+
+        .item {
+            border: 2px solid black;
+            /* height: 55px; */
+            width: 40px;
+            background: lightblue;
+            /* justify-self: flex-end; */
+
+        }
+
+        /* .item-1 {
+            grid-area: nav;
+
+        } */
+
+        .item2 {
+            /* grid-area: side; */
+            justify-self: flex-end;
+            
+        }
+/* 
+        .item3 {
+            grid-area: article;
+        }
+
+        .item4 {
+            grid-area: footer;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item ">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+    </div>
+</body>
+
+</html>
+<!-- this is the second one grid-area -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            display: grid;
+            grid-template-areas: "nav nav nav"
+                "side article article"
+                "footer footer footer";
+        }
+
+        .item {
+            border: 2px solid red;
+            height: 55px;
+        }
+
+        .item-1 {
+            grid-area: nav;
+            background-color: aqua;
+        }
+
+        .item-2 {
+            grid-area: side;
+            background-color: beige;
+        }
+
+        .item-3 {
+            grid-area: article;
+            background-color: azure;
+        }
+
+        .item-4 {
+            grid-area: footer;
+        }
+
+        .item-5 {
+            grid-area: nav;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+    </div>
+</body>
+
+</html> -->

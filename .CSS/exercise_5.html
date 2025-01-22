@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_exercise_5</title>
+    <style>
+        :root {
+            --primary-color: rgb(186, 21, 180);
+            --text-color: white;
+            --secondarycolor: lightblue;
+        }
+        header{
+            position: sticky;
+            top:0;
+        }
+
+        body {
+            background: var(--secondarycolor);
+        }
+
+        * {
+            margin: 0px;
+            /* padding: 0px; */
+            text-transform: capitalize;
+            font-family: 'poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        ul>li {
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+            margin-left: 20px;
+            /* display: flex; */
+            /* text-indent: 89px; */
+            list-style: none;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        ul>li>a {
+            color: var(--secondarycolor);
+            text-decoration: none;
+            text-align: center;
+        }
+
+        nav {
+            background: var(--primary-color);
+            padding: 12px 0px;
+            justify-items: center;
+            /* opacity: 0.3; */
+            /* text-decoration: solid; */
+        }
+
+        .boxes {
+            background: green;
+            width: 97.67%;
+            height: 70vh;
+            margin: 15px;
+            /* display: inline-block; */
+            box-sizing: border-box;
+            /* box-shadow: -1px 26px 20px grey; */
+
+        }
+
+        /* .box {
+            box-shadow: -1px 10px 23px rgb(108, 114, 117);
+        } */
+        /* this is optional u can do this towards makeing it preety */
+
+        .box1 {
+            background-color: peru;
+            display: inline-block;
+            width: 46%;
+            height: 50vh;
+            text-align: center;
+            margin: 25px;
+            margin-top: 45px;
+            font: left;
+
+        }
+
+        .box2 {
+            background-color: rgb(35, 35, 209);
+            color: white;
+            width: 46%;
+            height: 50vh;
+            /* margin: 15px; */
+            /* box-sizing: border-box; */
+            /* float: right; */
+            text-align: center;
+            display: inline-block;
+
+        }
+
+        .bg-text {
+            color: white;
+            /* display: inline-block; */
+            /* justify-content: center; */
+            width: 80%;
+            height: 20vh;
+            /* margin: 20px; */
+
+            margin-left: auto;
+            margin-right: auto;
+            border: 4px solid grey;
+            border-radius: 40px;
+            padding: 60px;
+            background: black;
+
+        }
+
+        .circle {
+            float: right;
+            height: 6vh;
+            width: 3vw;
+            border: 2px solid rgb(0, 0, 0);
+            background: salmon;
+            border-radius: 50%;
+            right: 23px;
+            /* display: inline-block; */
+            /* margin-right: 88px; */
+            position: fixed;
+        }
+
+        footer {
+            background: rgb(36, 201, 110);
+            margin: 10px;
+            color: whitesmoke;
+            height: 10vh;
+            width: auto;
+            padding: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="\">Home</a></li>
+                <li><a href="\">About</a></li>
+                <li><a href="\">Services</a></li>
+                <li><a href="\">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="boxes">
+            <div class="box box1">Box 1</div>
+            <div class="box box2">Box 2</div>
+        </div>
+        <div class="circle"></div>
+        <section>
+            <div class="bg-text">Welcome to the Sigma Web Development Express (The OP batch).</div>
+        </section>
+    </main>
+    <footer>
+        <p>Contact us</p>
+        <p>email id : The-conqueror198@gmail.com</p>
+        <div class="footer">&copy;2024 copy-rights my_company_name &trade;. All Rights Reserved.</div>
+        </div>
+    </footer>
+    
+</body>
+
+</html>

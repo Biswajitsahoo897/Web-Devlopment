@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Image with Padding</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+            background-image: url("https://wallpapercave.com/wp/wp4997548.jpg");
+        }
+
+        /* Card styles */
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            overflow: hidden;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .image-container {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #e0e0e0;
+            /* Optional background color for contrast */
+        }
+
+        .image-container img {
+            max-width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .tags {
+            margin-bottom: 10px;
+        }
+
+        .tag {
+            background-color: #ece8e8;
+            border-radius: 15px;
+            padding: 5px 10px;
+            margin: 0 5px;
+            display: inline-block;
+            font-size: 12px;
+            color: #555;
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="image-container">
+            <img src="https://i.pinimg.com/originals/00/37/a8/0037a8117b345f55372c916bd0979e3e.jpg" <img src=""
+                alt="Beautiful Lake">
+        </div>
+        <div class="content">
+            <div class="tags">
+                <span class="tag">Nature</span>
+                <span class="tag">Lake</span>
+            </div>
+            <h2>Lago di Braies</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur sodales morbi dignissim sed diam
+                pharetra vitae ipsum odio.</p>
+            <button>Read More</button>
+        </div>
+    </div>
+</body>
+
+</html>

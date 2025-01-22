@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-fit and cover</title>
+    <style>
+        .container{
+            height: 698px;
+            width: 734px;
+            outline: 10px black;
+            outline-offset: 100px ;
+            border: 10px solid rgb(21, 82, 119);
+            /* margin: 89px; */
+            background-color:rgb(132, 17, 255);
+            background-image: center center;
+            background-image: url("/.CSS/mclaren-gts-7680x4320-16221.jpg");
+            background-position:  center;
+            background-repeat: no-repeat;
+        }
+        img{
+            width: 400px;
+            height: 500px;
+            /* align-content:center; */
+            border: 2px solid rgb(255, 0, 0);
+            /* object-fit:cover; */
+            object-fit:scale-down;
+            /* object-fit:fill; */
+            /* object-fit:contain; */
+
+            /* object-position:top right; */
+            object-position:bottom left;
+            object-position: 100px 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="\.CSS\outrun-neon-dark-background-purple-3840x2160-4523.jpg" alt="HTMLimage">
+    </div>
+</body>
+</html>

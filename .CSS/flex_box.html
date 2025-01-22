@@ -1,0 +1,117 @@
+<!-- video 38 16:40m -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_flexbox</title>
+    <style>
+        .container {
+            /* every flex property  is applecable  for the container */
+            border: 3px solid maroon;
+            display: flex;
+            height: 80vh;
+            /* by default the items are aligned left to right if we want move it to the center use justified-content: center */
+            /* justify-content: center; */
+            /* u can use flex-end ,flex start, left ,right,normal,space-around,space-between */
+            /* align-items: center; */
+            /* or use align item : center; this can be use to move the content vertically centered.*/
+
+            /* in the justified  */
+            /* overflow: auto; */
+
+            /* flex-direction:row-reverse; */
+            /* flex-direction:column-reverse; */
+            /* flex-direction:column; */
+            flex-direction: row;
+            /* flex-wrap: wrap; */
+            /* align-content: center; */
+            /* align content means vertically center */
+            align-content: flex-start;
+            align-items: center;
+            /*flex-flow:<flex-direction><flex-wrap>*/
+
+            /* flex-flow: column row wrap; */
+
+            /* color: black; */
+            /* gap: 32px; */
+            /* i can write row gap and column gap since only gap includes both of it */
+            /* row-gap: 12px; */
+            /* column-gap:23px; */
+            /* or else gap: <row> <column>*/
+
+        }
+
+        .item {
+            /* margin: 5px; */
+            padding: 15px;
+            border: 3px solid rgb(0, 170, 255);
+            height: 12px;
+            width: 12px;
+            color:black;
+            background: rgb(53, 177, 102);
+            flex-grow: 2;
+        }
+
+        .order-1 {
+            order: -10;
+        }
+
+        .order-2 {
+            order: -5;
+        }
+        div.item1 {
+            /* flex-grow: 2; */
+            flex-shrink: 2;
+        }
+        .item13{
+            align-self: flex-end;
+        }
+        .item1{
+            align-self: flex-start;
+        }
+
+        /* less the value of the order the greater then the greater it will come to the first and the value can be negative and positive ,zero (by default)  */
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item order-2">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+            <div class="item order-1">10</div>
+            <div class="item">11</div>
+            <div class="item">12</div>
+            <div class="item item13">13</div>
+            <div class="item">14</div>
+            <div class="item">15</div>
+           
+        </div>
+    </main>
+</body>
+
+</html>
+
+
+<!-- IMPORTANT NOTES:justify content only -->
+<!-- justify-content == means center along the main axis 
+ align-items:center means center along the cross axis
+ in the row section X-axis is the main axis and the y-axis is the cross axis
+ 
+ in the colomns section X axis is the cross axis and the other one is main axis.
+ 
+    more than ne line in then use align-contents:center;
+    if one-line then use align-items:center;
+
+
+ 
+ -->

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectors</title>
+    <style>
+        /* this is the element selector */
+        div {
+            color: greenyellow;
+        }
+        /* child selector */
+        div > p{
+            color: orange;
+            font-size: medium;
+            background: #047bb7;
+        }
+        /* class selector */
+        .first{
+            color: red;
+            font-family: fantasy;
+        }
+        /* universal selctor */
+        *{
+            margin: 10px;
+            padding: 4px;
+        }
+        /* group selector */
+        footer,pre{
+            color: aliceblue;
+            margin-top: auto;
+            background:green;
+        }
+        /* this is ID selector */
+        #purple{
+            color: purple;
+        }
+        /* pseudo selector */
+        a:visited{
+            color: cadetblue;
+        }
+        a:link{
+            color: red;
+            font-size: 10px;
+            font: 1em sans-serif;
+        }
+        a:hover{
+            color: rgb(1, 70, 248);
+        }
+        /* attribute selector */
+        [data-e=a]{
+            font: bolder;
+            color: black;
+            background: yellowgreen;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <main class="first">
+        This is the first heading.
+    </main>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni nesciunt officiis voluptate mollitia vel
+        perferendis nam recusandae dolorem nulla iste tenetur expedita deserunt earum, quod doloremque optio! Eius,
+        dolore mollitia.
+    </p>
+    <div>
+        i am inside the div tag.
+        <p> i am a para inside the div.</p>
+        <article id="purple" data-e="a">
+            i am the article under the div and p.
+        </article>
+    </div>
+    <a href="https://www.google.com">GO TO Google</a>
+    <a href="https://www.flipkart.com">GO TO flipkart</a>
+    <footer>
+        contact me ..<br>
+        <pre>
+            here is my email id and no
+            someone@gmail.com
+            034092370923
+        </pre>
+    </footer>
+</body>
+</html>

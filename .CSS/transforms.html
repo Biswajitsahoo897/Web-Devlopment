@@ -1,0 +1,97 @@
+<!-- 
+2D TRANSFORMS:-
+
+This property allows the content to be restructured
+in ways like translate, rotate, scale or skew, etc.
+As it is 2D, therefore the content is transformed
+into x and y dimensions. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS transforms</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container{
+            width: 100vw;
+            height: 70vh;
+            border: 2px solid black;
+            /* justify-content: center; */
+            /* justify-items: center; */
+
+        }
+        .box{
+            height: 74px;
+            width: 75px;
+            background-color: blue;
+            color:white;
+            border: 2px solid rgb(226, 43, 43);
+            /* transform: rotate(40deg)  ; */
+            /* transform: rotate(0.35turn); */
+            /* transform: rotateX(60deg); */
+            /* transform: rotateY(60deg); */
+            transform: scale(1.2);
+            /* this property magnify or enlarge the box  */
+
+            
+            /* transform: skew(24deg); */
+            /* transform: skewY(50deg); */
+            /* skew can be applied for only X and Y axis */
+
+            /* transform: translate(50%) skewY(30deg) translateY(50%); */
+            /* u can also do this  */
+            transform: rotate(0.98turn);
+            transform-origin:-12% -14%;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            BOX
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+    <style>
+        .container{
+            background-color: antiquewhite;
+            width: 50vw;
+            height: 40vh;
+        }
+
+        .box{
+            background-color: aquamarine;
+            width: 5vw;
+            height: 4vh;
+            /* transition-property: background-color, transform;
+            transition-duration: 3s;
+            transition-timing-function: cubic-bezier(0.22, 0.43, 0, 0.99); */
+            /* transition-delay: 1s; */
+            transition: all 3s cubic-bezier(0.09, 0.5, 0, 0.99) 1s;
+        }
+
+        .translate{
+            transform: translateX(10vw) translateY(10vh) scale(2);
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box translate"></div>
+    </div>
+</body>
+</html> -->

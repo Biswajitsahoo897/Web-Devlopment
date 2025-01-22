@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS transition</title>
+    <style>
+        /* *{
+            margin: 5px;
+            padding:6px;
+        } */
+         /* this is the universal selector */
+        
+         
+        .container{
+            height:50vh ;
+            width: 90vw;
+            border: 2px solid black;
+            background: lightblue;
+        }
+
+        .box{
+            height: 10vh;
+            width: 15vw;
+            border: 2px solid slategray;
+            background-color: rgb(255, 0, 0);
+
+            transition-property: transform;
+
+            /* transition-property: all;
+            transition-duration: 3s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 1s; */
+            
+            /* this is equivalent to this or both are the same thing */
+            transition: all 3s ease-in-out 0.5s;
+        }
+        .translate{
+            transform: translateX(30vw) translateY(10vh);
+            background-color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container ">
+    <div class="box translate">BOX</div>
+    </div>
+</body>
+</html>

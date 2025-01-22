@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media-queries</title>
+    <style>
+        body {
+            background-color: rgb(68, 206, 22);
+        }
+        @media screen and (orientation:landscape) {
+            body{
+                border: 5px solid whitesmoke;
+                width: 1060px;
+            }
+        }
+        @media only screen and (max-width:1060px) {
+            body {
+                background-color:rgb(115, 0, 255);
+            }
+
+            .boxes {
+                flex-direction: column;
+                /* box-sizing: border-box; */
+            }
+        }
+
+
+
+        /* @media not|only mediatype and (expressions) */
+        /* then css code */
+        .boxes {
+            display: flex;
+        }
+
+        .box {
+            padding: 2px;
+            margin: 3px;
+            width: 344px;
+            height: 344px;
+            border: 3px solid yellow;
+            background-color: rgb(218, 88, 32);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Hey i am inside the div tag!
+    </div>
+    <div class="boxes">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+    </div>
+</body>
+
+</html>

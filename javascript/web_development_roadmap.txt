@@ -1,0 +1,35 @@
+1. Foundations
+
+HTML: Structure web pages.
+CSS: Style web pages.
+JavaScript: Add interactivity.
+Git/GitHub: Version control.
+
+2. Front-End Development
+
+Advanced JavaScript: ES6+ features.
+CSS Frameworks: Bootstrap, Tailwind.
+JS Frameworks: React, Vue, Angular.
+Responsive Design: Media queries.
+
+3. Back-End Development
+
+Node.js & Express: Server-side development.
+Databases: SQL (PostgreSQL, MySQL) and NoSQL (MongoDB).
+Authentication: OAuth, JWT.
+
+4. Full-Stack Development
+
+MERN/MEAN Stack: MongoDB, Express, React/Angular, Node.js.
+API Integration: REST, GraphQL.
+
+5. DevOps
+
+Docker: Containerization.
+CI/CD: Deployment automation.
+
+6. Additional Skills
+
+Web Security: HTTPS, CORS, CSRF.
+Performance Optimization: Speed up websites.
+Progressive Web Apps: Enhance user experience.

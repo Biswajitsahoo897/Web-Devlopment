@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position-property css</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /* the name of the symbol is asterisk an the selector name is universal selector */
+        .box {
+            height: 52vh;
+            width: 64vw;
+            padding: 10px;
+            margin: 3px;
+            border: 2px solid magenta;
+            position: relative;
+        }
+        .box1 {
+
+            background: coral;
+            position:relative;
+            
+            /* position: sticky;
+            height: 10vh;
+            top:3px;
+            left: 5px; */
+            /* this can be the nav bar of the web poge or the home page */
+
+        }
+
+        .box2 {
+            /* top: -40px;
+            left: 90px; */
+
+            position:sticky;
+            z-index:100;
+            top: 78px;
+            left: 45px;
+                        
+            /* position:absolute;
+            top:4px;
+            left: 100px  ; */
+            /* nearest posotioned ancestor */
+
+
+
+            background: cornflowerblue;
+        }
+
+        .box3 {
+            background:plum;
+            /* z-index:0; */
+            position: fixed;
+            margin:20px;
+            
+            /* position: fixed;
+            top:30px;
+            left: 100px; */
+            
+
+        }
+
+        .box4 {
+            background: rgb(42, 207, 42);
+        }
+        .parent{
+            padding: 23px;
+            margin: 10px;
+            border:2px solid grey;
+            /* position:relative; */
+            /* exception */
+            /* transform ,filter,or perspective property can also make an element appear as positioned*/
+           
+           
+            /* transform:translate(0);
+            filter: invert(0);
+            perspective: 9em; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box box1">this is a box1</div>
+        <div class="box box2">this is a box2</div>
+        <div class="box box3">this is a box3</div>
+        <div class="box box4">this is a box4</div>
+    </div>
+</body>
+
+</html>

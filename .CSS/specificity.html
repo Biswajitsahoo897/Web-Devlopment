@@ -1,0 +1,78 @@
+<!-- The Cascade Algorithm:-
+CSS stands for Cascading Stylesheets. The cascade is the algorithm for solving conflicts where multiple CSS rules apply to an HTML element. It's the reason that the text of the button styled with the above CSS will be purple.
+
+Understanding the cascade algorithm helps you understand how the browser resolves conflicts like this. The cascade algorithm has 4 distinct stages.
+
+Position and order of appearance: the order in which your CSS rules appear
+Specificity: an algorithm that determines which CSS selector has the strongest match
+Origin: the order in which CSS appears and where it comes from, whether that is a browser style, CSS from a browser extension, or your authored CSS
+Importance: some CSS rules are weighted more heavily than others, especially with the !important rule type
+Lets look into all these one by one -->
+
+
+<!-- Inline Style > ID Selector > Class or Attribute Selector > Element Selector > Universal Selector -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css specificity.</title>
+
+    <style>
+        p {
+            color: rgb(144, 0, 255);
+            /* background:rgb(193, 37, 37) ; */
+        }
+
+        /* the specificity of the element selector is 1 */
+        h1 {
+            color: rgb(142, 142, 142);
+        }
+
+        /* the specificity of the class selector is 10+1=11 */
+        h1.green {
+            color: rgb(169, 27, 169);
+        }
+
+        /* the specificity of the class selector is 10 */
+        .red {
+            color: red;
+        }
+
+        .yellow {
+            color: yellow;
+        }
+
+        .green {
+            color: greenyellow
+        }
+
+        [data-w=q] {
+            /* the specificity of this aattribute selector is 10 */
+            color: rgba(65, 61, 118, 0.817);
+        }
+
+        /* Universal Selector: 0
+    Element selectors and pseudo-elements: 1
+    Class selectors, attribute selectors, and pseudo-classes: 10
+    ID selectors: 100
+    Inline styles: 1000 */
+    </style>
+</head>
+
+<body>
+    <h1 class="hello yellow green red" data-w="q"><u>CSS specificity</u></h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit ipsum quos expedita eos natus laborum
+        gni asperiores velit voluptate mam enim! Modi expedita dicta nihil delectus illo tempore veniam vitae, sed est
+        eveniet nesciunt odit. Facilis, dicta, doloribus illo aspernatur dolorem enim necessitatibus consectetur a culpa
+        quos magni explicabo, placeat repellendus eos alias porro voluptatum dolores vel nulla perferendis! Maiores, id
+        incidunt ratione sapiente quod nam rerum iste voluptatum, ea nobis fugiat pariatur eum. Libero ratione hic
+        beatae iste sequi, dolor possimus sint. Labore, rerum minus! Atque deleniti id quo officiis tempore aliquid ex
+        non temporibus veniam dolorem quam nihil impedit animi laborum totam voluptas distinctio quibusdam, corrupti,
+        reiciendis est possimus officia dignissimos. Consectetur laudantium optio magni. Enim id porro quaerat sed eum
+
+    </p>
+</body>
+
+</html>

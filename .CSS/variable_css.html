@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variable_css</title>
+    <style>
+        :root {
+            --color: rgb(115, 110, 222);
+            --secolor: blue;
+            --defpad: 23px;
+            --defop: 0.4;
+        }
+
+        /* :root is the global variable declaration so and go for it. */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            --secolor: rgb(23, 46, 56);
+            /* this is the local variale declaraion */
+            /* if variable not found then call back funtion is used i.e background-color:var(--color,red); */
+            background-color: var(--secolor);
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        li {
+            color: white;
+        }
+
+        ul>li {
+            list-style: none;
+            padding: var(--defpad);
+            border: 12px solid var(--color);
+            opacity: var(--defop);
+        }
+
+        .container {
+            background: var(--color);
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Conatct</li>
+        </ul>
+    </nav>
+    <div class="container">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus minima velit
+        exercitationem esse aliquam distinctio praesentium quaerat laudantium dignissimos iste nihil ullam a, repellat
+        quae voluptate delectus dolores id, dolor doloribus eveniet tempore harum. Unde nihil reiciendis alias?
+        Voluptatibus, odit at. Optio, doloribus? Doloribus, cum.
+    </div>
+</body>
+</html>
+

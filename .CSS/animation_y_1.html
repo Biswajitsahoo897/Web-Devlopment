@@ -1,0 +1,176 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .boxes {
+            height: 50vh;
+            width: 80vw;
+            background: blue;
+            position: relative;
+
+        }
+
+        .circle {
+            height: 90px;
+            width: 90px;
+            border: 2px solid purple;
+            border-radius: 50%;
+            background: pink;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            animation: animate_x 3s linear infinite, animate_Y 1s ease-out infinite alternate-reverse;
+
+        }
+
+        @keyframes animate_x {
+            from {
+                left: 0%;
+                background: red;
+
+            }
+            to {
+                left: 100%;
+            }
+        }
+
+        @keyframes animate_Y {
+            from {
+                bottom: 0%;
+
+            }
+            to {
+                bottom: 62%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div class="circle"></div>
+
+    </div>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation_bro_code</title>
+
+    <style>
+        body {
+            background-color: hsl(0, 0%, 12%);
+        }
+
+        #box {
+            width: 250px;
+            height: 250px;
+            background-color: hsl(0, 100%, 62%);
+            font-size: 13em;
+            text-align: center;
+            color: aliceblue;
+        }
+
+        .circle{
+            animation-name: slideLeft;
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            animation-direction: normal;
+            animation-play-state: running;
+            animation-timing-function: cubic-bezier(0.28, -1.48, 0.54, 2.21);
+        }
+
+        @keyframes slideLeft {
+            from {
+                transform: translateX(300%)
+            }
+        }
+
+        @keyframes slideRight {
+            to {
+                transform: translateX(300%)
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(300%)
+            }
+        }
+
+        @keyframes slideDown {
+            to {
+                transform: translateY(300%)
+            }
+        }
+
+        @keyframes rotate {
+            50% {
+                transform: rotateZ(360deg)
+            }
+        }
+
+        @keyframes grow {
+            50% {
+                transform: scale(2, 2)
+            }
+        }        
+
+        @keyframes fade {
+            100% {
+                opacity: 1
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                background-color: hsl(0, 100%, 62%)
+            }
+
+            20% {
+                background-color: hsl(35, 100%, 62%)
+            }
+
+            40% {
+                background-color: hsl(63, 100%, 62%)
+            }
+
+            60% {
+                background-color: hsl(103, 100%, 62%)
+            }
+
+            80% {
+                background-color: hsl(201, 100%, 62%)
+            }
+
+            100% {
+                background-color: hsl(268, 100%, 62%)
+            }
+        }
+
+        @keyframes glow {
+            50% {
+                box-shadow: 0px 0px 50px hsl(60, 100%, 64%)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle"></div>
+    <div id="box">Hi</div>
+
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+
+<!-- IMPORTANT NOTE: Don't use padding in the GRID OR FLEX BOX use instad grid-column/row:value; -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_grid</title>
+    <style>
+        .container{
+            color: rebeccapurple;
+            background: blue;
+            border: 3px solid black;
+            height: 54vh;
+            width:80vw;
+            display: grid;
+            place-content: center;
+            /* place-content includes both align content and justify-content */
+            /* same as place items */
+            
+
+            /* gap: 30px 60px; */
+            /* this property might be used */
+
+
+
+            /* same things */
+            /* row-gap: 30px; */
+            /* column-gap: 60px; */
+            
+            
+            /* justify-items:center ;
+            justify-content: center;
+            align-items: center;
+            align-content: center; */
+            /* justifiy-item :center means to center that item to the center  of the each cell  */
+            
+
+            /* grid template row /columns means  the weidth of the row and columns only starting from the very beginning.
+            but in case of row/column-gap it works on everywhere  */
+
+            /*syntax of gap:<row gapping> <colum gapping>*/
+
+            grid-template-columns: 170px 100px ;
+            /* grid-template-rows: 5px 90px  8px; */
+        }
+        .item{
+            /* height: 20px; */
+            /* width: 34px; */
+            border: 2px solid black;
+            background: yellowgreen;
+            text-align: center;
+            
+
+        }
+        .item1{
+            grid-row:1/5 ;
+            /* grid-row-start: 1;
+            grid-row-end: 5; */
+            grid-column:2/6;
+            /* grid-column-start:2 ;
+            grid-column-end: 6; */
+        }
+        .item2{
+            grid-row:1/5 ;
+            grid-column:2/6;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item item10">10</div>
+        
+    </div>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            width: 80vw;
+            height: 100vh;
+            border: 2px solid black;
+            display: grid;
+            /* grid-template-columns: [pehla] 120px [doosra] 100px [t]; */
+            /* grid-template-rows: 100px 100px 100px; */
+            /* grid-template-columns: repeat(4, minmax(100px, 1fr)); */
+            grid-template-columns: repeat(4, 80px);
+            grid-template-rows: repeat(2, 80px);
+            /* gap: 34px; */
+            row-gap: 10px;
+            column-gap: 44px;
+            justify-items: center;
+            align-items: center;
+        }
+
+        .item {
+            border: 2px solid red;
+            height: 55px;
+            width: 55px;
+        }
+
+        .item-4 {
+            /* grid-row: 1/2;
+            grid-column: pehla/t; */
+        }
+
+        .item-1 {
+            /* grid-row: 1/2; */
+            /* or you can do  */
+            /* grid-row-start: 1;
+            grid-row-end: 2; */
+
+            /* same thing */
+            /* grid-column: 1/2; */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item item-4">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html> -->

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> css multicolor website</title>
+    <!-- <style>@import url("this will be the link for the google font-family");</style> -->
+    <style>
+        :root{
+            --primary-color:rgb(46, 46, 191);
+            --text-color:white;
+            --secondarycolor:lightblue;
+
+        }
+        body{
+            background:var(--secondarycolor);
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+        }
+        
+        ul>li {
+            display: inline-block;
+            padding: 10px;
+            margin:10px ;
+            list-style: none;
+            justify-content: center;
+            font-weight:bold;
+            color: aliceblue;
+        }
+        ul>li>a{
+            color: var(--secondarycolor);
+            text-decoration:none;
+        }
+
+        nav {
+            background:var(--primary-color);
+            padding: 12px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="\">Home</a></li>
+                <li><a href="\">About</a></li>
+                <li><a href="\">Services</a></li>
+                <li><a href="\">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>

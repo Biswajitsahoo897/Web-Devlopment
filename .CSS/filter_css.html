@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS filter</title>
+    <style>
+        .container{
+            padding: 0;
+            margin: 0;            
+        }
+        img{
+            filter: blur(6px);
+            filter: brightness(2);
+            height: 100vh;
+            width: 100vw;
+        }
+        #second{
+            /* filter: invert(0); */
+            filter:brightness(122%);
+            filter:opacity(50%)
+            /* filter:drop-shadow(); */
+            /* filter:sepia() */
+
+        }
+        :root {
+  overflow: hidden; /* hides any part of the sun below the horizon */
+  background-color: lightblue;
+  display: flex;
+  justify-content: center; /* centers the sun in the background */
+}
+
+.sun {
+  background-color: yellow;
+  border-radius: 50%; /* creates a circular background */
+  height: 100vh; /* makes the sun the size of the viewport */
+  aspect-ratio: 1 / 1;
+  animation: 4s linear 0s infinite alternate sun-rise;
+}
+
+@keyframes sun-rise {
+  from {
+    /* pushes the sun down past the viewport */
+    transform: translateY(110vh);
+  }
+  to {
+    /* returns the sun to its default position */
+    transform: translateY(0);
+  }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="/.CSS\outrun-neon-dark-background-purple-3840x2160-4523.jpg" alt="image">
+        <img id="second" src="/.CSS\mclaren-gts-7680x4320-16221.jpg" alt="imageIncss">
+    </div>
+</body>
+</html>
