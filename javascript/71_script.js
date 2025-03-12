@@ -5,10 +5,19 @@ let div =document.createElement("div");
 div.innerHTML="I have been created <b>by kunu</b>"
 div.setAttribute("class","Created")
 document.querySelector(".container").append(div);
+// this will append at the end of the div container
 
 
 let cont=document.querySelector(".container")
 cont.insertAdjacentHTML("afterend","Hey there i am the after contents.")
+
+
+document.querySelector(".container").insertAdjacentHTML("beforebegin","Hey there i am the before contents.")
+// this will append before the div container
+document.querySelector(".container").insertAdjacentHTML("afterbegin","Hey there i am the after contents.")
+// this will append after the div container
+document.querySelector(".container").remove()
+// this will remove the div container
 
 
 // // web browser console
@@ -26,6 +35,11 @@ cont.insertAdjacentHTML("afterend","Hey there i am the after contents.")
 
 // document.querySelector(".box").hasAttribute("style")
 // //returns true or false
+
+
+// document.querySelector(".box").removeAttribute("style")
+// //it will remove the style attribute
+
 
 // document.querySelector(".box").setAttribute("style","display:inline")
 // //it will add it 

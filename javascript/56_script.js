@@ -10,7 +10,7 @@ let age = 1;
 // console.log(age * grace)
 // console.log(age / grace)
 // console.log(age ** grace)
-// console.log(age % grace)
+// console.log(age % grace)     
 
 /*
 I am a 
