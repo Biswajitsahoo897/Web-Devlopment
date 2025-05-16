@@ -6,4 +6,4 @@
 4.tailwindCSS
 reactjs ,mongoDB, and all 
 
-by one and only harry bhai 
+This repo contains all the Projects , Tasks & Exercise by one and only harry bhai 
