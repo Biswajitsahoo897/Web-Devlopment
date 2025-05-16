@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Word Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #Fact {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px;
+            padding: 10px;
+            border: 2px solid #333;
+            display: inline-block;
+            min-width: 200px;
+            min-height: 50px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+        }
+        #btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        #btn:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Random Word Generator</h1>
+    <p id="Fact">Click the button to get a random word!</p>
+    <button id="btn">Get Word</button>
+
+    <script>
+        const url = "https://random-word-api.herokuapp.com/word?number=1";
+        const factPara = document.querySelector("#Fact");
+        const btn = document.querySelector("#btn");
+        const getWord = async () => {
+            console.log('Fetching Random Word...');
+            try {
+                let response = await fetch(url);
+                if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+
+                let data = await response.json();
+                factPara.innerText = data[0]; // Display the fetched word
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                factPara.innerText = "Failed to load word. Try again!";
+            }
+        };
+
+        btn.addEventListener("click", getWord);
+    </script>
+
+</body>
+</html>
