@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Card</title>
+    <style>
+        /* .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fffdfd;
+            font-family: Arial, sans-serif;
+        } */
+        .card {
+            display: flex;
+            width: 90vw;
+            /* height: 100px; */
+            margin: 10px auto;
+            border: 2px solid black;
+            background: #ffffff;
+            border-radius: 20px;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            /* justify-content: center; */
+            align-items: center;
+            /* overflow: hidden; */
+        }
+
+        .image {
+            position: relative;
+        }
+
+        .image .capsule {
+
+            position: absolute;
+            bottom: 4px;
+            opacity: 0.9;
+            z-index: 10;
+            right: 5px;
+            border-radius: 3px;
+            background: #000000;
+            color: #ffffff;
+            padding: 3px;
+            /* border-radius: 20px; */
+            font-size: 14px;
+        }
+
+        .image img {
+            margin: 10px;
+            width: 175px;
+            height: 120px;
+        }
+
+        .text h2 {
+            padding: 2px 0;
+            /* font-size: 20px; */
+        }
+
+        /* .text p {
+            /* padding: 10px 0; */
+        /* font-size: 14px; */
+
+        /* } */
+
+        .image .capsule {
+            position: absolute;
+            bottom: 1px;
+            opacity: 0.9;
+            z-index: 3;
+            right: 10px;
+            /* left: 172px; */
+            top: 109px;
+            background: #000000;
+            color: #ffffff;
+            padding: 0px;
+            /* border-radius: 20px; */
+            font-size: 14px;
+            height: 19px;
+            /* white-space: nowrap; */
+        }
+
+        div {
+            display: block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="image">
+                <img src="https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACwWOixJVrKLFindK92kYMgTcQbw"
+                    alt="image.png">
+                <div class="capsule">
+                    31:41
+                </div>
+            </div>
+            <div class="text">
+                <h2>Installing VS Code & How Website Work | Sigma Web Development Course -Tutorial #01</h2>
+                <p>CodeWithHarry . 767K Views . 8 months ago</p>
+
+            </div>
+        </div>
+    </div>
+    <Script src="77_script.js"></Script>
+</body>
+
+</html>
