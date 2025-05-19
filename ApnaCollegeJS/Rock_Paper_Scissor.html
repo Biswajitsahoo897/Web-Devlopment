@@ -35,76 +35,38 @@
     <div>
         <h1>Rock Paper Scissor</h1>
         <h2>Just click the button & Enjoy Play !!!!</h2>
-
-        <button class="btn" onclick="
-        let userMove = 'Rock';
-        let randomNumber = Math.random();
-        let compMove = '';
-        if (randomNumber < 0.34) {
-            compMove = 'Rock';
-        } else if (randomNumber <= 0.67) {
-            compMove = 'Paper';
-        } else {
-            compMove = 'Scissor';
-        }
-        let result = '';
-        if (userMove === compMove) {
-            result = 'It\'s a tie!';
-        } else if (compMove==='Scissor') {
-            result = 'You win!';
-        } else{
-            result = 'Computer wins!';
-        }
-        alert(`You chose ${userMove}. Computer chose ${compMove}. ${result}`);
-     ">Rock</button>
-        <!-- for Paper Move -->
-        <button class=" btn" onclick="
-        let userMove1 = 'Paper';
-        let randomNumber1 = Math.random();
-        let compMove1 = '';
-        if (randomNumber1 < 0.34) {
-            compMove1 = 'Rock';
-        } else if (randomNumber1 <= 0.67) {
-            compMove1 = 'Paper';
-        } else {
-            compMove1 = 'Scissor';
-        }
-        let result1 = '';
-        if (userMove1 === compMove1) {
-            result1 = 'It\'s a tie!';
-        } else if (compMove1 === 'Rock') {
-            result1 = 'You win!';
-        } else {
-            result1 = 'Computer wins!';
-        }
-        alert(`You chose ${userMove1}. Computer chose ${compMove1}. ${result1}`);      
-        
-        
-        ">Paper</button>
-
-        <button class="btn" onclick=" 
-        let userMove2 = 'Scissor';
-        let randomNumber2 = Math.random();
-        let compMove2 = '';
-        if (randomNumber2 < 0.34) {
-            compMove2 = 'Rock';
-        } else if (randomNumber2 <= 0.67) {
-            compMove2 = 'Paper';
-        } else {
-            compMove2 = 'Scissor';
-        }
-        let result2 = '';
-        if (userMove2 === compMove2) {
-            result2 = 'It\'s a tie!';
-        } else if (compMove2 === 'Paper') {
-            result2 = 'You win!';
-        } else {
-            result2 = 'Computer wins!';
-        }
-        alert(`You chose ${userMove2}. Computer chose ${compMove2}. ${result2}`); 
-        
-        ">Scissor</button>
+        <button class="btn" onclick="playGame('Rock')">Rock</button>
+        <button class=" btn" onclick="playGame('Paper')">Paper</button>
+        <button class="btn" onclick="playGame('Scissor')">Scissor</button>
     </div>
+        <script>
+        function playGame(userMove) {
+            const randomNumber = Math.random();
+            let compMove = '';
+            if (randomNumber < 0.34) {
+                compMove = 'Rock';
+            } else if (randomNumber <= 0.67) {
+                compMove = 'Paper';
+            } else {
+                compMove = 'Scissor';
+            }
+
+            let result = '';
+            if (userMove === compMove) {
+                result = "It's a tie!";
+            } else if (
+                (userMove === 'Rock' && compMove === 'Scissor') ||
+                (userMove === 'Paper' && compMove === 'Rock') ||
+                (userMove === 'Scissor' && compMove === 'Paper')
+            ) {
+                result = 'You win!';
+            } else {
+                result = 'Computer wins!';
+            }
+
+            alert(`You chose ${userMove}. Computer chose ${compMove}. ${result}`);
+        }
+    </script>
 </body>
 
 </html>
