@@ -38,8 +38,35 @@
         <button class="btn" onclick="playGame('Rock')">Rock</button>
         <button class=" btn" onclick="playGame('Paper')">Paper</button>
         <button class="btn" onclick="playGame('Scissor')">Scissor</button>
+        <button class="btn" onclick="resetButton()">ResetScore</button>
     </div>
         <script>
+        const Score=JSON.parse(localStorage.getItem('Score')) || {
+            Wins:0,
+            Losses:0,
+            Ties:0
+        };
+        // the Code inside the JSON.parse is a string we need to convert back it to JavaScript object
+        //console.log(localStorage.getItem('message')) //we save the string using setItem and now we are fetching the string using the getItem this 
+        //also works with even if we reload the page        
+        /*
+        if(!Score){//as null is a falsy Value if Score=null then  !Score & Score===null both will return true if Not then false
+            score={
+                Wins:0,
+                Losses:0,
+                Ties:0
+            }; //we can also use the default value 
+            //when we reset the score it goes to null so we gave a default value to handel it properly
+        }
+        */
+        
+        function resetButton(){
+            Score.Wins=0;
+            Score.Losses=0;
+            Score.Ties=0;
+            localStorage.removeItem('Score');
+        }
+
         function playGame(userMove) {
             const randomNumber = Math.random();
             let compMove = '';
@@ -61,10 +88,24 @@
             ) {
                 result = 'You win!';
             } else {
-                result = 'Computer wins!';
+                result = 'Computer Wins!';
             }
+            if(result==='You win!'){
+                Score.Wins+=1;
+            }
+            else if(result==='Computer Wins!'){
+                Score.Losses+=1;
+            }
+            else{
+                Score.Ties+=1;
+            }
+            // After Updation of the code we saved the data in the local storage
+            //local storage only supports for the string variable only so we convertd it tp JSON stringify
+            localStorage.setItem('Score',JSON.stringify(Score));
 
-            alert(`You chose ${userMove}. Computer chose ${compMove}. ${result}`);
+            alert(`You chose ${userMove}. Computer chose ${compMove}. ${result}
+            Wins:${Score.Wins} , Losses:${Score.Losses},Ties:${Score.Ties}
+            `);
         }
     </script>
 </body>
