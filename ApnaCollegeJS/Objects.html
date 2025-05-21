@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in JavaScript</title>
+</head>
+<body>
+    <script>
+
+      const product = {
+        name: 'socks',
+        price: 1090
+      };
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name = 'cotton socks';
+      console.log(product);
+
+      product.newProperty = true;
+      console.log(product);
+
+      delete product.newProperty;
+      console.log(product);
+
+      const product2 = {
+        name: 'shirt',
+        'delivery-time': '1 day',
+        rating: {
+          stars: 4.5,
+          count: 87
+        },/*this is called the nested object*/
+        fun: function function1() {
+          console.log('function inside object');
+        }
+      };
+      console.log(product2);
+      console.log(product2.name);
+      console.log(product2['name']);
+      console.log(product2['delivery-time']);
+      
+      console.log(product2.rating.count);
+      product2.fun();
+    // the Built in JSON object converts the Javascript object to JSON string
+    // JSON.stringify(product2);
+    console.log(JSON.stringify(product2));
+    const jsonString=JSON.stringify(product2)
+    console.log(JSON.parse(jsonString))  //it is used to convert Javscript Object back and fort to the JSON
+
+    // auto boxing in javascript 
+    console.log('Hello'.length);
+    console.log('HeLLo'.toLocaleLowerCase()); //here hello is a special object javascript wraps a string in an object this feature in js is called Auto-Boxing
+
+    
+    // OBJECTS ARE REFERENCE 
+    const object1={
+        message:'Hello World'
+    };
+    const object2=object1;
+    // it is not copying the object into the varible it's copying the reference 
+    // means it points to the same memory to the computer's memory
+    console.log(object1);
+    object2.message='I am a new message'
+    console.log(object2);
+        
+       
+    
+    // WER CAN'T COMPARE THE OBJECTS DIRECTLY
+    const object3={
+        message:'I am a new message'
+    };
+    console.log(object1===object2);
+    console.log(object1===object3);//compares only reference not the value the variable holding 
+    
+
+
+    // DESTRUCTURING : easier way to take properties out of an object
+    const object4={
+        message:'Good Job!',
+        Price:39754
+    }    
+    const {message,Price}=object4;
+    console.log(message);
+    console.log(Price);
+    
+
+
+    // SHORTHANDED METHOD 
+    const object5={
+      message,
+      // method:function func1(){
+      //   console.log('Method inside object');
+      // }
+      //so this is the shorthand method for the function
+      method(){
+        console.log('Method');
+      }
+    }
+    console.log(object5);
+    // console.log("")
+    object5.method();
+    </script>
+</body>
+</html>
