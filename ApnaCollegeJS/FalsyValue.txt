@@ -1,0 +1,15 @@
+A falsy value in JavaScript is a value that, when evaluated in a Boolean context (like an if statement), is considered false. There are only a few values in JavaScript that are falsy; everything else is truthy.
+
+Common Falsy Values
+false
+0 and -0
+"" (empty string)
+null= intentioally want something to be empty
+undefined= it will give the default value   
+
+Ex:
+fucn(undefined); =>  'default'
+fuc(); =>'default'
+
+fucn(null); =>null
+NaN (Not a Number)
