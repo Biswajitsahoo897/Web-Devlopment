@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_Project</title>
+</head>
+
+<body>
+    <p>Youtube Subscribe Button</p>
+    <button onclick="subscribe()  
+    " class="js-subscribe">Subscribe</button>
+
+
+    <script>
+        function subscribe() {
+            const buttonclick = document.querySelector('.js-subscribe');
+            if (buttonclick.innerText === 'Subscribe') {
+                buttonclick.innerHTML = 'Subscribed';
+            } else {
+                buttonclick.innerHTML = 'Subscribe';
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+<!-- NOTES -->
+<!-- innerHTML doesn't work with the white spaces -->
+<!-- innerText can overcome this issue -->
