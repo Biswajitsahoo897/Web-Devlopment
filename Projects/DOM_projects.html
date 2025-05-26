@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM_Project</title>
+    <style>
+        body{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* font-weight:500; */
+
+        }
+        .js-subscribe{
+            border:none;
+            background-color: black;
+            color:white;
+            border-radius: 90px;
+            /* padding:10px; */
+            padding-bottom:10px;
+            padding-top:10px;
+            padding-right:15px;
+            padding-left:15px;
+            cursor:pointer;
+            font-weight:bold;
+
+        }
+        /* .js-subscribe:hover{
+            /* background-color: rgb(66, 53, 53); */
+        /* } */ 
+        .is-Subscribe{
+            background-color: rgb(240, 240, 240);
+            color:black;
+            font-weight:bold;
+            padding-top:10px;
+        }
+        
+        .js-shipping-button{
+            border:none;
+            padding: 17px;
+            border-radius:30px;
+            background: rgb(3, 179, 3);
+            color: white;
+            font-weight:bold;
+            /* space inside the element is called padding 
+            and outside the element called margin */
+            cursor:pointer;
+
+        }
+        .js-shipping-button:hover{
+            backdrop-filter: blur(10px);
+            background-color: rgb(2, 128, 2);
+
+        }
+        /* .js-cost-input{
+            border:none;
+            border-bottom:1px solid black;
+            padding:10px;
+            margin-bottom:10px;
+            width:200px;    
+            font-size:16px;
+            font-weight:bold;
+        } */
+        .cost-input{
+            padding: 10px;
+            font-size: 15px;
+        }   
+        u{
+            /* text-decoration: none; */
+            color:black;
+            font-weight:bold;
+            font-size: 30px;
+        }
+        .js-total-cost{
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+
+<body> 
+    <p>Youtube Subscribe Button</p>
+    <button onclick="subscribe()  
+    " class="js-subscribe Subscribe-button">Subscribe</button>
+    <p><u>Amazon Shipping Calculator</u></p>
+    <p>Cost of the Product above $40 will be free shipping</p>
+    <p>Less than $40 will be $10 shipping</p>
+    <input type="text" class="js-cost-input cost-input" placeholder="Enter Cost Of Product" onkeydown="
+    handelkeyDownEvent(event);
+    ">
+    <button class="js-shipping-button" onclick="calculateShipping()">Calculate</button>
+    <!-- if the amount is less than $40 then add $10 =$50-->
+    <p class="js-total-cost"></p>
+    <div class="thank-you-message">Thanks for shopping with us</div>
+    <script>
+        // String(49);
+        // console.log('89'-9);
+        // if a string contains only - ,/ then the javascript will convert it into numbers  called Type coercion
+        function handelkeyDownEvent(event){
+            console.log('Typing...');
+            if(event.key==='Enter'){
+            calculateShipping();
+            }
+        }
+        
+        function subscribe() {
+            const buttonclick = document.querySelector('.js-subscribe');
+            buttonclick.classList.add('is-Subscribe');
+            if (buttonclick.innerText === 'Subscribe') {
+                buttonclick.innerHTML = 'Subscribed';
+            } else {
+                buttonclick.innerHTML = 'Subscribe';
+                buttonclick.classList.remove('is-Subscribe');
+            }
+        }
+        function calculateShipping(){
+            const inputElement = document.querySelector('.js-cost-input');
+            let cost = Number(inputElement.value);
+            if (cost < 40 && cost !== 0) {
+                cost += 10; //whenever we get value from input we get string so we need to convert it to number
+            }
+            document.querySelector('.js-total-cost').innerHTML = `Total Cost:$${cost}`;
+            // document.querySelector('.thank-you-message').innerHTML = `Thanks for shopping with us`;
+        }
+    </script>
+</body>
+
+</html>
+
+
+<!-- clicks , Keydowns :-events
+onclick , onkeydown:- event listeners -->
+
+<!-- classList give us control of the class of the element   there are two attributes in classList add and remove and toggle many more-->
