@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <script src="Script.js"></script>
+    <div class="container">
+        <div id="container-heading"><u>
+                <h2>To Do List</h2>
+            </u></div>
+        <div class="button-container">
+            <input type="text" placeholder="Enter the Tasks" class="js-name-input " onkeydown="handleKeyEvent(event);">
+            <input type="date" class="js-date-input">
+            <button onclick="addtoDo();" class="js-add-button">Add</button>
+        </div>
+        <div class="js-input-task-names"></div>
+    </div>
+
+
+</body>
+
+</html>

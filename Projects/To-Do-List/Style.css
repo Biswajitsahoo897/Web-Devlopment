@@ -1,0 +1,77 @@
+* {
+    margin: 5px;
+    padding: 5px;
+}
+
+body {
+    background: linear-gradient(to right, #4753ff, #000000);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.container{
+    color: black;
+    background-color: rgb(255, 255, 255);
+    height: 65vh;
+    width: 50vw;
+    border: 2px solid rgb(0, 128, 255);
+    border-radius: 15%;
+}
+.button-container {
+
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    /* padding-top: 1px; */
+    /* flex-direction: row; */
+    /* flex-wrap: nowrap; */
+    /* margin-top: 10px; */
+
+}
+.js-add-button,.delete-button {
+    padding: 10px 15px;
+    height: 45px;
+    background: rgb(26, 213, 26);
+    border: 2px solid whitesmoke;
+    font-weight: bold;
+    border-radius: 50px;
+
+}
+#container-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.js-add-button:hover {
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: 1.1;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.js-name-input {
+    padding: 10px 6px;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.js-input-task-names {
+    display: grid;
+    /* background-color:deepskyblue; */
+    grid-template-columns: 14px 182px 148px 109px;
+    justify-content: space-around;
+    font-size: 20px;
+    justify-items: center;
+    align-content: space-around;
+    align-items: baseline;
+}
+.delete-button{
+    background: red;
+    border: 2px solid whitesmoke;
+}
