@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced-function</title>
+</head>
+<body>
+    <script>
+        /*
+        const num=9;
+        const function1=function greeting(){
+            console.log("This is the advanced javascript function that u can assign function to a variable.");
+
+        };
+        console.log(function1);
+        console.log(typeof function1);
+        const func2=function() {
+            console.log("Anonynomus Function");
+        }//function without a name
+        console.log(typeof func2);
+        // In JavaScript functions are values
+        // but the original function has some adavntages like 1) it is easy to read 2)Hoisting means
+        // we don't have to worry about the function call order
+        function run(para){
+            para();
+        }
+        run(function(){
+            console.log("Good Phone!!!");
+        })
+        // passing a function into another function\
+
+        */
+
+        setTimeout(function(){
+            console.log("Hello World!!.....1");
+            setTimeout(function(){
+
+                console.log("Hello World!!.....2");
+            },5000);
+        },4000);
+        console.log("Asyncronous Code!!");//means it won't wait for the line to finish before going to the next line...so this will execute first 
+
+        setInterval(function(){
+            console.log("I am SetInterval")
+        },10000)
+    </script>
+</body>
+</html>
+
