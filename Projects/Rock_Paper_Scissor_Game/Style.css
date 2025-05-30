@@ -65,7 +65,7 @@ body {
     margin-top: 10px;
   }
 
-  .reset-btn {
+  .reset-btn,.autoplay-btn {
     /* margin-top: 20px; */
     /* padding: 5px 15px; */
     background-color: #ffffff;
@@ -95,4 +95,9 @@ body {
     display: flex;
     /* justify-content: center; */
     /* align-items: center; */
+  }
+  .resetAndAuto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
