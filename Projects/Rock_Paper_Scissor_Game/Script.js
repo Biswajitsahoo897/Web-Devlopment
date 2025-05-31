@@ -3,6 +3,7 @@ const Score = JSON.parse(localStorage.getItem('Score')) || {
   Losses: 0,
   Ties: 0
 };
+
 function resetButton() {
   Score.Wins = 0;
   Score.Losses = 0;
@@ -52,7 +53,23 @@ function picComputerMove() {
   return compMove;
 }
 
-function playGame(userMove) {
+document.querySelector('.js-rock-button').addEventListener('click',()=>{
+  playGame('Rock');
+});
+document.querySelector('.js-paper-button').addEventListener('click',()=>{
+  playGame('Paper');
+});
+document.querySelector('.js-scissor-button').addEventListener('click',()=>{
+  playGame('Scissor');
+});
+
+document.body.addEventListener('keypress',(event)=>{
+  if(event.key==='r'||event.key==='R') playGame('Rock');
+  else if(event.key==='p'||event.key==='P') playGame('Paper');
+  else if(event.key==='s'||event.key==='S') playGame('Scissor');
+});
+
+  function playGame(userMove) {
   const compMove = picComputerMove();
   let result = '';
   if (userMove === compMove) {
