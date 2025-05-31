@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced-function</title>
+    <button class="js-button">Click</button>
 </head>
 <body>
     <script>
@@ -32,18 +33,53 @@
 
         */
 
-        setTimeout(function(){
-            console.log("Hello World!!.....1");
-            setTimeout(function(){
+        // setTimeout(function(){
+        //     console.log("Hello World!!.....1");
+        //     setTimeout(function(){
 
-                console.log("Hello World!!.....2");
-            },5000);
-        },4000);
-        console.log("Asyncronous Code!!");//means it won't wait for the line to finish before going to the next line...so this will execute first 
+        //         console.log("Hello World!!.....2");
+        //     },5000);
+        // },4000);
+        // console.log("Asyncronous Code!!");//means it won't wait for the line to finish before going to the next line...so this will execute first 
+        // setInterval(function(){
+        //     console.log("I am SetInterval")
+        // },10000);
 
-        setInterval(function(){
-            console.log("I am SetInterval")
-        },10000)
+        // Arrow Function
+        const arrowFunction=()=>{
+            console.log("This is the oneline arrow function.");
+        }
+        arrowFunction();
+
+        const oneParam=param=>{
+            console.log("One parameter function!!")
+            return console.log(param*2);
+        }
+        oneParam(4);
+
+        const oneline=()=>3+9;
+        console.log(oneline());
+        // If u are passing a function into another functions then use arrow functions for better
+
+        [
+            'make Dinner',
+            'Wash Dishes',
+            'Wash Bike'
+        ].forEach((value,index)=>{
+            if(value==='make Dinner'){
+                return;
+            }
+            index++;
+            console.log(index,value);
+            // console.log(value);
+        })
+       const eventListener=()=>{
+        console.log("This button is clicked!!!");
+       }
+        const buttonElement=document.querySelector('.js-button');
+        buttonElement.addEventListener('click',eventListener);
+        // it has two parameter
+        buttonElement.removeEventListener('click',eventListener);
     </script>
 </body>
 </html>
