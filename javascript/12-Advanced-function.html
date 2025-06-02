@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Advanced-function</title>
     <button class="js-button">Click</button>
 </head>
+
 <body>
     <script>
         /*
@@ -46,18 +48,18 @@
         // },10000);
 
         // Arrow Function
-        const arrowFunction=()=>{
+        const arrowFunction = () => {
             console.log("This is the oneline arrow function.");
         }
         arrowFunction();
 
-        const oneParam=param=>{
+        const oneParam = param => {
             console.log("One parameter function!!")
-            return console.log(param*2);
+            return console.log(param * 2);
         }
         oneParam(4);
 
-        const oneline=()=>3+9;
+        const oneline = () => 3 + 9;
         console.log(oneline());
         // If u are passing a function into another functions then use arrow functions for better
 
@@ -65,22 +67,34 @@
             'make Dinner',
             'Wash Dishes',
             'Wash Bike'
-        ].forEach((value,index)=>{
-            if(value==='make Dinner'){
+        ].forEach((value, index) => {
+            if (value === 'make Dinner') {
                 return;
             }
             index++;
-            console.log(index,value);
+            console.log(index, value);
             // console.log(value);
         })
-       const eventListener=()=>{
-        console.log("This button is clicked!!!");
-       }
-        const buttonElement=document.querySelector('.js-button');
-        buttonElement.addEventListener('click',eventListener);
+        const eventListener = () => {
+            console.log("This button is clicked!!!");
+        }
+        const buttonElement = document.querySelector('.js-button');
+        buttonElement.addEventListener('click', eventListener);
         // it has two parameter
-        buttonElement.removeEventListener('click',eventListener);
+        buttonElement.removeEventListener('click', eventListener);
+        // it has one parameter
+
+        // this is known as filter function 
+        // it always returns a new array if the boolean value is true 
+        console.log([1,3,-5,9,10,-3].filter((value, index)=>{
+            return value>0;
+        }));
+        // 1 way of printing even numbers 
+        console.log([1,3,-5,9,10,-3].map((value,index)=>{
+            return 2*value;
+        }));
+        // 2 way of printing even numbers 
+        console.log([2,3,5].map(value=>value*2))
     </script>
 </body>
 </html>
-
