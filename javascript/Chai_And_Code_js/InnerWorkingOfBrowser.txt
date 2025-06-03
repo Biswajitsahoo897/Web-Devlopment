@@ -43,8 +43,6 @@ DOM (Document Object Model) Construction: The tokens are organized into a tree-l
 
 Nodes: Fundamental units of the DOM. They can be element nodes (tags), attribute nodes, text nodes, etc.
 
-
-
 Node List: A collection of nodes, often returned by JavaScript methods that query the DOM.
 
 
