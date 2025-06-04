@@ -1,10 +1,10 @@
-const map = new Map()
-map.set('IN', "India")
-map.set('USA', "United States of America")
-map.set('Fr', "France")
-map.set('IN', "India")
+const user = {
+    username: "Binaya Kumar",
+    price: 723,
 
-for(const key in map){
-    console.log(key);
-    
+    welcomeMessage: function() {
+        console.log(`${this.username} , welcome to website`);
+        console.log(this);
+    }
+
 }

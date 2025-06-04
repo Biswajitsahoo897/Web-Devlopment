@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>htnml Events </title>
+    <title>html Events </title>
 </head>
 <body style="background-color: #414141; color: aliceblue;">
     <h2>Amazing image</h2>
@@ -42,17 +42,17 @@
     
     document.getElementById('google').addEventListener('click',function(e){
         e.preventDefault();
-        e.stopPropagation()
+        e.stopPropagation();
         console.log("google clicked");
     }, false)
    
     
     document.querySelector('#images').addEventListener('click', function(e){
         console.log(e.target.tagName);
-        if (e.target.tagName === 'IMG') {
+        if (e.target.tagName === 'IMG'){
             console.log(e.target.id);
-            let removeIt = e.target.parentNode
-            removeIt.remove()
+            let removeIt = e.target.parentNode;
+            removeIt.remove();
         }    
         
     })
