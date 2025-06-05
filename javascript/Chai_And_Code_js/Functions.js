@@ -30,25 +30,23 @@ const user = {
 }
 console.log(user);
 
-function greet(){
-    let userName='biswa';
-    console.log(this.userName);
-    // u can't use this keyword in the function 
-}
+
+// +++++++++++++++++++++++ HOISTING IN Js+++++++++++++++++++++
 greet()
 
+function greet(){
+    let userName='biswa';
+    console.log(userName);
 
-
-
-
-
-
+    // console.log(this.userName);
+    // u can't use this keyword in the function 
+}
+// ----------------------------------------------------------
 
 
 
 
 // Immediately Invoked Function Expressions (IIFE)
-
 
 (function chai(){
     // named IIFE
@@ -57,4 +55,4 @@ greet()
 
 ( (name) => {
     console.log(`DB CONNECTED TWO ${name}`);
-} )('hitesh')
+} )('hesienberge')
