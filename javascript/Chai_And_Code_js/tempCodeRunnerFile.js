@@ -1,2 +1,7 @@
-val1 = null ?? 10 ?? 20
-console.log(val1);
+const newarrayNum=[]
+myNumers.forEach(()=>{
+  if(e>6){
+    newarrayNum.push(e)
+  }
+})
+console.log(newarrayNum);

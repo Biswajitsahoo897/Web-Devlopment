@@ -17,9 +17,32 @@ const books = [
 })
   console.log(userBooks);
 
+
+
+
   const myNumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  const newnum=myNumers.filter((e)=>(
+      e>7
+      //always use return statment if u use curly braces{} but not require if u use ()
+  ))
+  console.log(newnum);
+  
 
 // const newNums = myNumers.map( (num) => { return num + 10})
+
+
+
+
+
+// u can also use the forEach loop
+// const myNumers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+const newarrayNum=[]
+myNumers.forEach((e)=>{
+  if(e>6){
+    newarrayNum.push(e)
+  }
+})
+console.log(newarrayNum);
 
 const newNums = myNumers
                 .map((num) => num * 10 )
