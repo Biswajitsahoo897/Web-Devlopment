@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM One</title>
+</head>
+<body>
+    <div class="title2">Hello World My name is Biswajit Sahoo <span style="display: none;">Style Text</span></div>
+    <h2>amet consectetur adipisicing elit. Ratione asperiores recusandae a. <span style="display: none;">TEXT CONTENT</span></h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
+    <input type="password" class="Mailpassword">
+
+    <ul>
+        <li class="List-items">one</li>
+        <li class="List-items">two</li>
+        <li class="List-items">three</li>
+        <li class="List-items">four</li>
+    </ul>
+    <script>
+        const ele1=document.querySelector('ul')
+        const turnGreen=ele1.querySelector('li')
+        // turnGreen.style.backgroundColor="Green"
+        // turnGreen.innerText='Five'
+        const tempList=document.querySelectorAll('li')
+        console.log(tempList)//it is a nodeList not an array, not exactly 
+        tempList[0].style.color="blue"
+        tempList.forEach((l)=>(
+            l.style.backgroundColor="grey"
+        ))
+        const tempItem=document.getElementsByClassName('List-items')
+        // tempItem.forEach((l)=>(
+        //     l.style.backgroundColor="red"
+        // ))
+        const myConvertedArray=Array.from(tempItem)
+        myConvertedArray.forEach((li)=>(
+            li.style.color="orange"
+        ))
+
+    </script>
+</body>
+</html>
+
+
+
+<!-- NOTES Difference Between the innerHTML ,innerText ,textContent -->
+ <!-- 
+document.querySelector('h2').innerHTML
+'amet consectetur adipisicing elit. Ratione asperiores recusandae a. <span style="display: none;">TEXT CONTENT</span>'
+
+document.querySelector('h2').innerText
+'amet consectetur adipisicing elit. Ratione asperiores recusandae a.'
+
+document.querySelector('h2').textContent
+'amet consectetur adipisicing elit. Ratione asperiores recusandae a. TEXT CONTENT' 
+
+document.querySelector('input[type="password"]')
+<input type=​"password" class=​"Mailpassword">​
+-->
