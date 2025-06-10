@@ -1,6 +1,6 @@
-# Sigma Web Development
+# Web Development
 
-Welcome to the Sigma Web Development repository!  
+Welcome to the Web Development repository!  
 This project covers all the essential and advanced topics you need to become a modern web developer.
 
 ---
