@@ -1,30 +1,30 @@
-// async function getData() {
-//     // Simulate getting data from a server
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             resolve(455);
-//         }, 5500);
-//     });
-// }
+async function getData() {
+    // Simulate getting data from a server
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(455);
+        }, 5500);
+    });
+}
 
 
 
-// console.log('loading...Modules');
-// console.log('Do something else');
+console.log('loading...Modules');
+console.log('Do something else');
 
-// console.log('Loading data');
+console.log('Loading data');
 
-// let data=getData();
-// // data.then(()=>{
-// //     console.log(data);
-// //     console.log('Process data');
-// //     console.log('task 2');
+let data=getData();
+data.then(()=>{
+    console.log(data);
+    console.log('Process data');
+    console.log('task 2');
     
-// // })
+})
 
-// console.log('Process data');
-// console.log('task 2');
-// console.log(data);
+console.log('Process data');
+console.log('task 2');
+console.log(data);
 
     
     
