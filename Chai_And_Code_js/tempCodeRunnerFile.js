@@ -1,7 +1,7 @@
-const newarrayNum=[]
-myNumers.forEach(()=>{
-  if(e>6){
-    newarrayNum.push(e)
-  }
-})
-console.log(newarrayNum);
+fetch('https://jsonplaceholder.typicode.com/users')
+    .then((response) => {
+        console.log("Response: ", response.json()); 
+       
+    })
+    .then(data => console.log(data))
+    .catch(error => console.log("E: ", error));
