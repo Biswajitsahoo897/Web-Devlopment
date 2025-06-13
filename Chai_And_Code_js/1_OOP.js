@@ -1,3 +1,4 @@
+//Basic OOP 1
 const user={
     username:"Biswajit",
     loginCount:8,
@@ -29,3 +30,21 @@ console.log(userOne.constructor);
 console.log(userTwo);
 
 
+// Call & This 
+function SetUsername(username){
+    //complex DM calls
+    this.username=username;
+}
+
+function createUser(username,email,Password){
+    SetUsername.call(this,username);
+    //this will refer to the current context of createUser
+    // what is current context?
+    // ans: current context is the object that is being created by the constructor function
+    this.email=email;
+    this.Password=Password;
+
+}
+
+const user1=new createUser('Biswajit','biswajitSahaoo2005@gmail.com',29023);
+console.log(user1);
