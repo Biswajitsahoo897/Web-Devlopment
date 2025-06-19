@@ -9,7 +9,14 @@ function App() {
   //the function to update the state value can be called with a new value or a function that takes the previous value and returns a new value
   let [counter, SetCounter] = useState(5);
   const addValue = () => {
-    SetCounter(counter + 1);
+    //VERY IMPORTANT NOTE:
+    //when you call the function to update the state value, it does not update the state
+    // SetCounter(counter + 1); // this will not work as expected because it is asynchronous
+    SetCounter((prvCounter)=>prvCounter+1);
+    SetCounter((prvCounter)=>prvCounter+1);
+    SetCounter((prvCounter)=>prvCounter+1);
+    //setCounter((prevCounter) => prevCounter + 1); // this will work as expected
+    //  because it uses the previous state value then it calls the function to update the state value
   }
   const removeValue=()=>{
     if(counter>0){
