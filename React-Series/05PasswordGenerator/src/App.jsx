@@ -32,8 +32,8 @@ function App() {
   //we have to use the hook called useEffect to the passwordGenerator() function 
 
   const copyPasswordToClipboard=useCallback(()=>{
-    //passwordRef.current?.select(); //'?' is for the optional selection if the value is NULL at initial.
-    passwordRef.current?.setSelectionRange(0,4); //to select first 4 element if u want to select
+    passwordRef.current?.select(); //'?' is for the optional selection if the value is NULL at initial.
+    //passwordRef.current?.setSelectionRange(0,4); //to select first 4 element if u want to select
     window.navigator.clipboard.writeText(password); 
   },[password])
 
@@ -101,6 +101,7 @@ window.navigator.clipboard.writeText(password);: This copies the value of passwo
             <label htmlFor="characterInput">Characters</label>
           </div>
         </div>
+
       </div>
     </>
 
