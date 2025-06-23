@@ -6,7 +6,7 @@ import Home from './components/Home/home.jsx'
 import About from './components/About/About.jsx'
 import Contact from './components/Contact/contact.jsx'
 import './index.css'
-import { githubInfoLoaded } from './components/Github/Github.jsx'
+import Github, { githubInfoLoaded } from './components/Github/Github.jsx'
 import User from './components/User/user.jsx'
 
 
