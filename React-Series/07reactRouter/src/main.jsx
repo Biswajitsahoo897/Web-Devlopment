@@ -8,7 +8,7 @@ import Contact from './components/Contact/contact.jsx'
 import './index.css'
 import Giithub, { githubInfoLoaded } from './components/Github/Github.jsx'
 import User from './components/User/user.jsx'
-import Github from './components/Github/Github.jsx'
+
 
 // createBrowserRouter is used to create a router for the application it takes an array of route objects
 // and returns a router object that can be used to render the application
