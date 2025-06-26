@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import './App.css'
 import { ThemeProvider } from './Contexts/Theme'
 import ThemeButton from './Components/ThemeButton'
 import Card from './Components/Card'
@@ -39,7 +38,6 @@ function App() {
         </div>
       </div>
     </ThemeProvider>
-
     </>
   )
 }
