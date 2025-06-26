@@ -6,16 +6,24 @@ import Profile from './Components/Profile'
 import UserContext from './Context/UserContext'
 
 function App() {
-  const {user}=useContext(UserContext);
   return (
     <>
       <UserContextProvider>
-        <h1>React with Chai and Code Hello {user.username}</h1>
-        <Login/>
-        <Profile/>
+        <UserContent />
       </UserContextProvider>
     </>
   )
+}
+
+function UserContent() {
+  const { user } = useContext(UserContext);
+  return (
+    <>
+      <h1>React Series, Hello...{user?.username}</h1>
+      <Login />
+      <Profile />
+    </>
+  );
 }
 
 export default App
