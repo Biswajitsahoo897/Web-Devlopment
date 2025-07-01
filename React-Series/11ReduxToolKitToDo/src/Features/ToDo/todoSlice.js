@@ -14,7 +14,7 @@ export const todoSlice=createSlice({
                 id:nanoid() ,
                 text:action.payload.text
             }
-            state.todos.push(todo); //acessing state directly is allowed
+            state.todos.push(todo); //acessing state directly is allowed  because previous state is preserved so no need to use the Spread Operator
         },
         // reducer 2
         removeTodo:(state,action)=>{

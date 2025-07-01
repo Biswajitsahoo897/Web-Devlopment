@@ -4,3 +4,6 @@ export const store = configureStore({
     reducer:todoReducer
 
 });
+
+
+// it is the single source truth value
