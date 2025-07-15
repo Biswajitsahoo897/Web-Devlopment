@@ -24,8 +24,10 @@ function Signup() {
                 const userData = await authService.getCurrentUser()
                 if (userData) {
                     dispatch(login(userData))
+                    // use this to update global state,After login, update user info in Redux store.
                 }
                 naviagte("/")
+                // or else navigates to home
             }
         } catch (error) {
             setError(error.message)
@@ -64,7 +66,7 @@ function Signup() {
                             label="Email: "
                             placeholder="Enter your email"
                             type="email"
-                            // Always use ...(Spread Operator) the value may overwrite in other field perhaps 
+                            // Always use ...(Spread Operator) the value may overwrite in other field perhaps , Go to the react-hook-form Doc
                             {...register("email", {
                                 required: true,
                                 validate: {
