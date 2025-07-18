@@ -10,13 +10,6 @@ function Protected({children,authentication=true}) {
     const authStatus=useSelector(state=>state.auth.status)
     // for redirecting the route 
     useEffect(()=>{
-
-        if(authStatus===true){
-            navigate("/")
-        } else if(authStatus){
-            navigate("/")
-        }
-
         if (authentication && authStatus!==authentication) {
             navigate("/login")
         }
@@ -26,7 +19,7 @@ function Protected({children,authentication=true}) {
         setLoader(false)
     },[authStatus,navigate,authentication])
 
-  return loader? <h1>Loading...</h1>:<>{children}</>
+    return loader? <h1>Loading...</h1>:<>{children}</>
 }
 
 
