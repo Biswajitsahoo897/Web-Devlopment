@@ -1,5 +1,4 @@
 import conf from '../config/conf'
-
 import { Client, Account ,ID} from "appwrite";
 
 export class AuthService{
@@ -40,18 +39,18 @@ export class AuthService{
 
     async getCurrentUser(){
         try {
-            return await this.account.get()
+            const user= await this.account.get()
+            return user
             // this is for the gettting current account details
         } catch (error) {
             console.log(`Appwrite Service:: getCurrentUser :: error ${error}`);
-                
+            return null;
         }
-        return null;
     }
 
     async logout(){
         try {
-            await this.account.deleteSession();
+            await this.account.deleteSessions();
 
         } catch (error) {
             console.log(`Appwrite Service ::Logout:: error ${error}`);
