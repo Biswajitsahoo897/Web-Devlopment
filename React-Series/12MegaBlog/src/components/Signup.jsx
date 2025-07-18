@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import authService from '../Appwrite/auth'
 import { Link, useNavigate } from 'react-router-dom'
-import { Button, Input, Logo } from './index.js'
+import  {Input, LogoutBtn } from './index.js'
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
 import { login } from '../store/authSlice'
+import Logo from './Logo.jsx'
 
 
 
@@ -83,10 +84,10 @@ function Signup() {
                             required:true,
                         })}
                         />
-                        <Button
+                        <LogoutBtn
                         type="submit"
                         className="w-full"
-                        >Create Account</Button>
+                        >Create Account</LogoutBtn>
                     </div>
                 </form>
             </div>
