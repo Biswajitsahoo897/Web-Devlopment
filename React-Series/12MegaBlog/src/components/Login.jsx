@@ -55,7 +55,6 @@ function Login() {
                             label="Email: "
                             placeholder="Enter your email"
                             type="email"
-                            // Always use ...(Spread Operator) the value may overwrite in other field perhaps 
                             {...register("email", {
                                 required: true,
                                 validate: {
@@ -74,8 +73,8 @@ function Login() {
                             })}
                         />
                         <Button
-                            type="submit"
                             className="w-full"
+                            type="submit"
                         >Sign in</Button>
                     </div>
                 </form>
@@ -85,3 +84,4 @@ function Login() {
 }
 
 export  {Login}
+// Always use ...(Spread Operator) the value may overwrite in other field perhaps 

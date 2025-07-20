@@ -11,28 +11,26 @@ export class AuthService{
             .setProject(conf.appwriteProjectId); 
         this.account=new Account(this.client);
     }
-    async createAccount({email,password,name}){
-        try {
-            const userAccount=await this.account.create(ID.unique(),email,password,name);
-            if(userAccount){
-                //call another method
-                return userAccount;
-            } 
-            else{
-                //call another method or do something else
-            }
-        } catch (error) {
-            console.log(`Create Account Error:${error}`);
-            throw error
+    async createAccount({email, password, name}) {
+    try {
+        const userAccount = await this.account.create(ID.unique(), email, password, name);
+        if (userAccount) {
+            // If account creation is successful, immediately log the user in
+            return this.login({email, password});
+        } else {
+            return userAccount;
         }
+    } catch (error) {
+        console.log(`Create Account Error: ${error}`);
+        throw error;
     }
+}
 
     async login({email,password}) {
         try {
-            await this.account.createEmailPasswordSession(email,password);
+            return await this.account.createEmailPasswordSession(email,password);
         } catch (error) {
             console.log(`Login Error :${error}`);
-            
             throw error;
         }
     }
