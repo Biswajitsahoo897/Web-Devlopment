@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import authService from '../Appwrite/auth'
 import { Link, useNavigate } from 'react-router-dom'
-import  {Input, LogoutBtn } from './index.js'
+import  {Button, Input } from './index.js'
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
 import { login } from '../store/authSlice'
@@ -15,6 +15,11 @@ function Signup() {
     const [error, setError] = useState("")
     const dispatch = useDispatch()
     const { register, handleSubmit } = useForm()
+    const [showPassword,setShowPassword]=useState(false);
+
+    const togglePasswordButton=()=>{
+        setShowPassword(!showPassword);
+    }
 
     const create = async (data) => {
         setError("")
@@ -53,18 +58,17 @@ function Signup() {
                 </p>
                 {error && <p className='text-red-600 mt-8 text-center'>{error}</p>}
                 {/* for handling the error by printing the message */}
-
                 <form onSubmit={handleSubmit(create)}>
                     <div className="space-y-5">
                         <Input
-                            label="FullName: "
+                            label="FullName "
                             placeholder="Enter Your FullName "
                             {...register("name",{
                                 required:true
                             })}
                         />
                         <Input
-                            label="Email: "
+                            label="Email "
                             placeholder="Enter your email"
                             type="email"
                             // Always use ...(Spread Operator) the value may overwrite in other field perhaps , Go to the react-hook-form Doc
@@ -80,14 +84,16 @@ function Signup() {
                         <Input
                         label="password"
                         type="password"
+                        onClick={togglePasswordButton}
+                        placeholder="Enter your password"
                         {...register("password",{
                             required:true,
                         })}
                         />
-                        <LogoutBtn
+                        <Button
                         type="submit"
-                        className="w-full"
-                        >Create Account</LogoutBtn>
+                        className="w-full hover:bg-blue-800"
+                        >Create Account</Button>
                     </div>
                 </form>
             </div>
