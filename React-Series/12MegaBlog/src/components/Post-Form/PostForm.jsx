@@ -1,14 +1,13 @@
 import React, { useCallback, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { Button, Input, Select, RTE } from '../index.js'
-
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import service  from '../../Appwrite/config.js'
+import service from '../../Appwrite/config.js'
 
 
 function PostForm({ post }) {
-    const { register, handleSubmit, watch, setValue, control, getValues } = useForm({
+    const { register, handleSubmit, watch, setValue, control } = useForm({
         defaultValues: {
             title: post?.title || '',
             slug: post?.slug || '',
@@ -18,65 +17,73 @@ function PostForm({ post }) {
     })
 
     const navigate = useNavigate()
-    const userData = useSelector(state => state.user.userData)
+    const userData = useSelector(state => state.auth.userData)
+    // if (!userData) return <p>Please log in to create a post.</p>
+
+
+
     // used to read the data coming from the form 
 
     const submit = async (data) => {
-        if (post) {
-            const file = data.image[0] ? await service.uploadFile(data.image[0]) : null
-            if (file) {
-                service.deleteFile(post.featuredImage)
-            }
-            const dbPost = await service.updatePost(post.$id,
-                {
-                    ...data,
-                    featuredImage: file ? file.$id : undefined,
-                })
-            if (dbPost) {
-                navigate(`/post/${dbPost.$id}`)
-            }
-        }else{
-            const file=await service.uploadFile(data.image[0]);
-            if(file){
-                const fileId=file.$id
-                data.featuredImage=fileId
-                const dbPost=await service.createPost({
-                    ...data,
-                    userId:userData.$id
-                })
-                if(dbPost){
+        try {
+            if (post) {
+                const file = data.image[0] ? await service.uploadFile(data.image[0]) : null
+                if (file) {
+                    service.deleteFile(post.featuredImage)
+                }
+                const dbPost = await service.updatePost(post.$id,
+                    {
+                        ...data,
+                        featuredImage: file ? file.$id : undefined,
+                    })
+                if (dbPost) {
                     navigate(`/post/${dbPost.$id}`)
                 }
+            } else {
+                const file = data.image?.[0] ? await service.uploadFile(data.image[0]) : null;
+                if (file) {
+                    const fileId = file.$id
+                    data.featuredImage = fileId
+                    const dbPost = await service.createPost({
+                        ...data,
+                        userId: userData.$id
+                    })
+                    if (dbPost) {
+                        navigate(`/post/${dbPost.$id}`)
+                    }
+                }
             }
+        } catch (error) {
+            console.error("Image upload failed:", error);
         }
     }
     // useCallback will return a memoized version of the callback that only changes if one of the inputs has changed.
-    const slugTransform=useCallback((value)=>{
-        if(value && typeof value==='string'){
-        return value
-            .trim()
-            .toLowerCase()
-            .replace(/^[a-zA-Z\d\s]+/g,'-')
-            .replace(/\s/g,'-')
+    const slugTransform = useCallback((value) => {
+        if (value && typeof value === 'string') {
+            return value
+                .trim()
+                .toLowerCase()
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '')
         }
         return ''
-    },[])
+    }, [])
 
 
     // Most Important 
-    useEffect(()=>{
-        const subscription=watch((value,{name})=>{
-            if(name==='title'){
-                setValue('slug',slugTransform(value.title,{shouldValidate:true}))
+    useEffect(() => {
+        const subscription = watch((value, { name }) => {
+            if (name === 'title') {
+                setValue('slug', slugTransform(value.title), { shouldValidate: true })
             }
         })
         // whenever somethings changes(dependencies like watch..) 
         // it re-runs before that it clean-up the old subscription using subscription.unsubscribe()
         //Prevents Memory Leak 
-        return ()=>{
+        return () => {
             subscription.unsubscribe()
         }
-    },[watch,slugTransform,setValue])
+    }, [watch, slugTransform, setValue])
 
 
     return (
@@ -93,11 +100,11 @@ function PostForm({ post }) {
                     placeholder="Slug"
                     className="mb-4"
                     {...register("slug", { required: true })}
-                    onInput={(e) => {
-                        setValue("slug", slugTransform(e.currentTarget.value), { shouldValidate: true });
+                    onChange={(e) => {
+                        setValue("slug", slugTransform(e.target.value), { shouldValidate: true });
                     }}
                 />
-                <RTE label="Content :" name="content" control={control} defaultValue={getValues("content")} />
+                <RTE label="Content :" name="content" control={control} />
             </div>
             <div className="w-1/3 px-2">
                 <Input
