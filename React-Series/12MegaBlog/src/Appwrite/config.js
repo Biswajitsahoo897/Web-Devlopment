@@ -15,7 +15,7 @@ export class Service{
         this.storage=new Storage(this.client);
     }
 
-    async createPost({title,slug,content,feturedImage,status,userId}){
+    async createPost({title,slug,content,featuredImage,status,userId}){
         try {
             return await this.datbases.createDocument(
                 conf.appwriteDatabaseId,
@@ -24,7 +24,7 @@ export class Service{
                 {
                     title,
                     content,
-                    feturedImage,
+                    featuredImage,
                     status,
                     userId
                 }
@@ -126,8 +126,9 @@ export class Service{
         return this.storage.getFilePreview(
             conf.appwriteBucketId,
             fileId
-        )
+        ).href;
     }
+    
 }
 
 const service =new Service()
