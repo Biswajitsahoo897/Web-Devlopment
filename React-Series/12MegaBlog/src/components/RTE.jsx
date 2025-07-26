@@ -1,6 +1,5 @@
 import React from 'react'
 import { Editor } from '@tinymce/tinymce-react'
-// rich editor
 import { Controller } from 'react-hook-form'
 
 export default function RTE({ name, control, label, defaultValue = "" }) {
@@ -8,7 +7,7 @@ export default function RTE({ name, control, label, defaultValue = "" }) {
     return (
         <div className="w-full">
             {label && <label className='inline-block mb-1 pl-1'>{label}</label>}
-            =
+            
             <Controller
                 name={name || "Content"}
                 control={control}
@@ -16,6 +15,7 @@ export default function RTE({ name, control, label, defaultValue = "" }) {
                 render={({ field: { onChange } }) => (
                     // the render element
                     <Editor
+                        apiKey='h5xqc026uf16nfsdnf9gtk3mly3s34xb9tf7hbd7jyhl1v93'
                         initialValue={defaultValue}
                         init={{
                             initialValue: defaultValue,
@@ -51,7 +51,7 @@ export default function RTE({ name, control, label, defaultValue = "" }) {
                     />
                 )}
             />
-            <input type="submit" />
+            {/* <input type="submit" /> */}
         </div>
 
     )
