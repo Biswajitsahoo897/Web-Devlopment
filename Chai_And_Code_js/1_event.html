@@ -23,32 +23,40 @@
         alert("owl clicked")
     }
 
-    //  attachEvent()
+    //  attachEvent() , it is same as addEventListner
     // jQuery - on
-
+  
     // type, timestamp, defaultPrevented
     // target, toElement, srcElement, currentTarget,
     // clientX, clientY, screenX, screenY
     // altkey, ctrlkey, shiftkey, keyCode
 
-    document.getElementById('images').addEventListener('click', function(e){
+
+    // This is the example of Event Propagation / Event Bubbling 
+    document.getElementById('images').addEventListener('click', (e)=>{
         console.log("clicked inside the ul");
     }, false)
+    //Parent Event  ,Event Propagation default value => false , if we set true then it will be Event Capturing
+    // Event Capturing - the event is captured from the parent to child
 
     document.getElementById('owl').addEventListener('click', function(e){
         console.log("owl clicked");
-        e.stopPropagation()
-    }, false)
+        e.stopPropagation() //it won't bubble the event further
+    }, false)//Child Event
     
     document.getElementById('google').addEventListener('click',function(e){
         e.preventDefault();
         e.stopPropagation();
         console.log("google clicked");
     }, false)
-   
     
+    // when we click on the image it will vanish the image from the DOM
+    // e.target is the element that triggered the event
+    // e.currentTarget is the element to which the event handler is attached
+
     document.querySelector('#images').addEventListener('click', function(e){
         console.log(e.target.tagName);
+        // console.log(e.target.parentNode);
         if (e.target.tagName === 'IMG'){
             console.log(e.target.id);
             let removeIt = e.target.parentNode;

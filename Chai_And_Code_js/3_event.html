@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout & Project</title>
+</head>
+<style>
+    .tableClass{
+        padding: 5px;
+        border: 2px solid rgb(255, 0, 0);
+        /* background: #000; */
+        color: rgb(0, 0, 0);
+    }
+</style>
+<body>
+    <h1>hello world!</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <div class="insert"></div>
+    <script>
+        // let intervalId;
+        // document.getElementById('start').addEventListener('click', () => {
+        //     const sayDate = function (str) {
+        //         console.log(str, Date.now());
+        //     }
+        //     intervalId = setInterval(sayDate, 1000, 'hi');
+        //     document.getElementById('stop').addEventListener('click', () => {
+        //         clearInterval(intervalId);
+        //     })
+        // })
+
+        // Random Color Genarator
+        function randomColorGenerator(){
+            let hex='0123456789ABCDEF';
+            let color='#';
+            for(let i=0;i<6;i++){
+            color+=hex[Math.floor(Math.random()*16)]
+            }           
+            return color;            
+        }
+        
+        let intervalId;
+       const startChangingColor=function() {
+            if(!intervalId){
+            intervalId=setInterval(changeBGColor,1000)
+            }
+            function changeBGColor(){
+            document.body.style.backgroundColor=randomColorGenerator();
+            }
+       };
+       
+       const stopChangingColor=function(){
+        clearInterval(intervalId);
+        intervalId=null;
+       }
+       document.querySelector('#start').addEventListener('click',startChangingColor);
+       document.querySelector('#stop').addEventListener('click',stopChangingColor);
+
+        // 2nd Project
+        // const insert=document.querySelector('.insert');
+        // window.addEventListener('keydown',(e)=>{
+        // insert.innerHTML=`
+        // <div class="tableClass">
+        //     <table>
+        //         <tr>
+        //             <th>Key</th>
+        //             <th>KeyCode</th>
+        //             <th>Code</th>
+        //         </tr>
+        //         <tr>
+        //             <td>${e.key===' '?'Space':e.key}</td>
+        //             <td>${e.keyCode}</td>
+        //             <td>${e.code}</td>
+        //         </tr>
+        //         </table>
+            
+        // </div>
+        // `
+        // })
+    </script>
+</body>
+
+</html>

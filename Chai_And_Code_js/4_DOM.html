@@ -15,32 +15,41 @@
     // this is the function to addLanguage in the html
 
     function addLanguage(langName){
-        const li = document.createElement('li');//li , div ,p h1,and all
-        // li.innerHTML = `${langName}`
-        li.append(' Hello',document.createTextNode(langName),' last');
-        // append() takes two or multiple values unlike appendChild(); 
-        // it is always prefer to use(for append) the createTextNode which is more secure than innerHTML
+        const li = document.createElement('li'); //li , div ,p h1,and all
+        li.innerHTML = `${langName}`
+       
         document.querySelector('.language').appendChild(li);
     }
     addLanguage("python");
-    addLanguage("typescript");
+    addLanguage("Typescript");
 
+    // this is the optimal approach 
     function addOptiLanguage(langName){
         const li = document.createElement('li');
         li.appendChild(document.createTextNode(langName))
         document.querySelector('.language').appendChild(li)
+
+        // li.append(' Hello',document.createTextNode(langName),' last');
+        // append() takes two or multiple values unlike appendChild(); 
+        // it is always prefer to use(for append) the createTextNode which is more secure than innerHTML
     }
-    addOptiLanguage('golang')
+    addOptiLanguage('Rust')
+    addOptiLanguage('C++')
+
+
+    
     //Edit
     const secondLang = document.querySelector("li:nth-child(2)")
-    console.log(secondLang);
+    console.log(secondLang); // <li>Python<li>
     //secondLang.innerHTML = "Mojo"
     const newli = document.createElement('li')
     newli.textContent = "Mojo"
     secondLang.replaceWith(newli)
+
+
     //edit
-    const firstLang = document.querySelector("li:first-child")
-    firstLang.outerHTML = '<li>TypeScript</li>'
+    const firstLang = document.querySelector('li:first-child')
+    firstLang.outerHTML = '<li>Java</li>'
     //remove
     const lastLang = document.querySelector('li:last-child')
     // lastLang.remove()

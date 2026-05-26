@@ -1,6 +1,6 @@
-# Sigma Web Development
+# Web Development
 
-Welcome to the Sigma Web Development repository!  
+Welcome to the Web Development repository!  
 This project covers all the essential and advanced topics you need to become a modern web developer.
 
 ---
@@ -22,7 +22,8 @@ This project covers all the essential and advanced topics you need to become a m
 
 ### About
 
-This repository is curated and maintained by one and only Harry Bhai.  
+This repository is curated and maintained by me .  
 Here, you will find code samples, project ideas, and resources to help you master web development from scratch to advanced.
+*Keep Learning (^_^), Keep Shining ⚡*
 
 Happy Coding! 🚀

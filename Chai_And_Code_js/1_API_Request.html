@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <!--
+        0	UNSENT	Client has been created. open() not called yet.
+        1	OPENED	open() has been called.
+        2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+        3	LOADING	Downloading; responseText holds partial data.
+        4	DONE	The operation is complete.  
+    -->
+    <div class="followers" style="color: aliceblue;"></div>
+    <script>
+        // response is a string not an object
+        const requestURL='https://api.github.com/users/Biswajitsahoo897';
+        const xhr=new XMLHttpRequest();
+        xhr.open('GET',requestURL);
+        xhr.onreadystatechange=function(){
+        console.log(xhr.readyState);
+        const data=JSON.parse(this.responseText)
+            if(xhr.readyState===4){                
+                console.log('Readystate is 4');   
+                let avtardiv=document.createElement('div');
+                let avtarURL=data.avatar_url
+                avtardiv.innerHTML = `<img src="${avtarURL}" alt="Avatar Image" style="height: 100px; width: 100px;">`
+                document.body.append(avtardiv);
+                document.querySelector('.followers').textContent = `Followers: ${data.followers} Following:${data.following}`;                              
+            }
+        }
+        xhr.send()
+    </script>
+</body>
+</html>
