@@ -1,2 +1,4 @@
 here is the test file , 
 hello world
+here goes some content
+conflict happens here 2
