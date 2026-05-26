@@ -3,4 +3,5 @@ hello world
 here i am learning branch merging
 conflict merging resolved
 here goes some content
-another content
+
+my name is theConqueror
